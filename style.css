@@ -18,7 +18,10 @@ body {
   background-size: 40px 40px;
   color: white;
   margin: 0;
-  overflow: hidden; 
+}
+
+body:has(.dashboard-wrapper) {
+  overflow: hidden;
 }
 
 .dashboard-wrapper {
@@ -269,7 +272,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 10000;
     transition: opacity 0.3s;
 }
 
@@ -417,3 +420,834 @@ body {
     background: var(--primary);
     border-color: var(--primary);
 }
+
+/* Live Portal Sync Banner */
+.live-portal-banner {
+    background: rgba(0, 51, 102, 0.25);
+    border: 1px solid rgba(72, 187, 120, 0.3);
+    border-radius: 14px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.live-pulse-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #48bb78;
+    display: inline-block;
+    box-shadow: 0 0 10px #48bb78;
+    animation: livePulse 1.8s infinite;
+}
+
+@keyframes livePulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(72, 187, 120, 0.7); }
+    70% { transform: scale(1.1); box-shadow: 0 0 0 8px rgba(72, 187, 120, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(72, 187, 120, 0); }
+}
+
+.live-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.live-badge.online {
+    background: rgba(72, 187, 120, 0.2);
+    color: #48bb78;
+    border: 1px solid rgba(72, 187, 120, 0.4);
+}
+
+.live-badge.connecting {
+    background: rgba(237, 137, 54, 0.2);
+    color: #ed8936;
+    border: 1px solid rgba(237, 137, 54, 0.4);
+}
+
+.live-badge.offline {
+    background: rgba(229, 62, 62, 0.2);
+    color: #fc8181;
+    border: 1px solid rgba(229, 62, 62, 0.4);
+}
+
+.live-refresh-btn {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.live-refresh-btn:hover {
+    background: var(--primary);
+    border-color: var(--accent);
+}
+
+/* Auth Styles */
+.auth-header-btn {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    border: none;
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 153, 51, 0.25);
+    transition: all 0.3s ease;
+}
+
+.auth-header-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 153, 51, 0.4);
+}
+
+.auth-tabs {
+    display: flex;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    padding: 4px;
+    margin-bottom: 2rem;
+    gap: 4px;
+}
+
+.auth-tab-btn {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: #a0aec0;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+}
+
+.auth-tab-btn.active {
+    background: var(--primary);
+    color: white;
+}
+
+.auth-form-group {
+    margin-bottom: 1.25rem;
+    text-align: left;
+}
+
+.auth-form-group label {
+    display: block;
+    font-size: 0.85rem;
+    color: #cbd5e0;
+    margin-bottom: 0.4rem;
+    font-weight: 500;
+}
+
+.auth-input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: white;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: all 0.3s;
+}
+
+.auth-input:focus {
+    outline: none;
+    border-color: var(--accent);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.auth-error-msg {
+    display: none;
+    background: rgba(229, 62, 62, 0.15);
+    border-left: 4px solid #e53e3e;
+    color: #feb2b2;
+    padding: 10px 14px;
+    border-radius: 6px;
+    margin-bottom: 1.25rem;
+    font-size: 0.85rem;
+    text-align: left;
+}
+
+.demo-login-box {
+    margin-top: 1.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.25rem;
+    text-align: center;
+}
+
+.demo-account-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #cbd5e0;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    margin: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.demo-account-btn:hover {
+    background: rgba(72, 187, 120, 0.15);
+    border-color: #48bb78;
+    color: #48bb78;
+}
+
+.profile-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-avatar-circle {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================================
+   NOTIFICATION SYSTEM STYLES
+   ============================================================ */
+
+/* Notification Panel (slide-in from right) */
+.notif-panel {
+    position: fixed;
+    top: 0;
+    right: -420px;
+    width: 400px;
+    height: 100vh;
+    background: #0d1117;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 9100;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: -8px 0 40px rgba(0, 0, 0, 0.6);
+}
+
+.notif-panel.open {
+    right: 0;
+}
+
+.notif-panel-header {
+    padding: 1.25rem 1.25rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 51, 102, 0.3);
+    flex-shrink: 0;
+}
+
+.notif-action-btn {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: #a0aec0;
+    padding: 5px 10px;
+    border-radius: 7px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+}
+.notif-action-btn:hover {
+    background: rgba(255,255,255,0.14);
+    color: white;
+}
+
+.notif-panel-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.notif-panel-footer {
+    padding: 0.85rem 1.25rem;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    background: rgba(0,0,0,0.2);
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Individual notification card */
+.notif-item {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 0.9rem 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+
+.notif-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    border-radius: 3px 0 0 3px;
+}
+
+.notif-item.type-announcement::before { background: var(--accent); }
+.notif-item.type-portal_live::before  { background: #48bb78; }
+.notif-item.type-benefit_update::before { background: #63b3ed; }
+
+.notif-item:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.16);
+    transform: translateX(-2px);
+}
+
+.notif-item.unread {
+    background: rgba(0, 51, 102, 0.25);
+    border-color: rgba(0, 100, 200, 0.3);
+}
+
+.notif-item-title {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #f7fafc;
+    margin-bottom: 0.3rem;
+    line-height: 1.3;
+}
+
+.notif-item-body {
+    font-size: 0.79rem;
+    color: #a0aec0;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.notif-item-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+    font-size: 0.7rem;
+    color: #718096;
+}
+
+.notif-unread-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #3182ce;
+    box-shadow: 0 0 6px #3182ce;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.notif-empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Bell button hover */
+#notif-bell-btn:hover {
+    background: rgba(255,153,51,0.15) !important;
+    border-color: rgba(255,153,51,0.4) !important;
+    transform: scale(1.08);
+}
+
+/* Badge animations */
+@keyframes notifPop {
+    0%   { transform: scale(0.5); opacity: 0; }
+    70%  { transform: scale(1.2); }
+    100% { transform: scale(1);   opacity: 1; }
+}
+
+@keyframes badgePulse {
+    0%, 100% { box-shadow: 0 0 6px rgba(229,62,62,0.7); }
+    50%       { box-shadow: 0 0 18px rgba(229,62,62,1); }
+}
+
+#notif-badge[data-count]:not([data-count="0"]) {
+    animation: notifPop 0.4s ease, badgePulse 2s ease infinite;
+}
+
+/* Toast popup */
+.toast-notif {
+    background: #0d1117;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 14px;
+    padding: 1rem 1.1rem 1rem 1rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.7);
+    pointer-events: all;
+    cursor: pointer;
+    animation: toastSlideIn 0.4s cubic-bezier(0.25,0.46,0.45,0.94) forwards;
+    max-width: 380px;
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.toast-notif::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+}
+
+.toast-notif.type-announcement::before { background: var(--accent); }
+.toast-notif.type-portal_live::before  { background: #48bb78; }
+.toast-notif.type-benefit_update::before { background: #63b3ed; }
+
+.toast-notif:hover { transform: translateY(-3px); }
+
+.toast-icon { font-size: 1.4rem; flex-shrink: 0; }
+
+.toast-content { flex: 1; min-width: 0; }
+
+.toast-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #f7fafc;
+    margin-bottom: 0.25rem;
+    line-height: 1.3;
+}
+
+.toast-body {
+    font-size: 0.78rem;
+    color: #a0aec0;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.toast-close {
+    background: none;
+    border: none;
+    color: #718096;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 0 4px;
+    flex-shrink: 0;
+    line-height: 1;
+}
+.toast-close:hover { color: white; }
+
+.toast-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary), var(--accent));
+    animation: toastProgress 6s linear forwards;
+    border-radius: 0 0 0 14px;
+}
+
+@keyframes toastSlideIn {
+    from { opacity: 0; transform: translateX(60px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes toastSlideOut {
+    from { opacity: 1; transform: translateX(0) scale(1); }
+    to   { opacity: 0; transform: translateX(60px) scale(0.9); }
+}
+
+@keyframes toastProgress {
+    from { width: 100%; }
+    to   { width: 0%; }
+}
+
+/* Scheme notification view panel inside sidebar */
+#nav-notifications { font-size: 0.9rem; }
+
+/* Notification Card Action Buttons */
+.notif-item-actions {
+    display: flex;
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+    padding-top: 0.6rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    flex-wrap: wrap;
+}
+
+.notif-card-btn {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #e2e8f0;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: all 0.2s;
+    font-family: inherit;
+}
+
+.notif-card-btn:hover {
+    background: var(--primary);
+    border-color: var(--accent);
+    color: white;
+    transform: translateY(-1px);
+}
+
+.notif-card-btn.portal-btn {
+    background: rgba(72, 187, 120, 0.15);
+    border-color: rgba(72, 187, 120, 0.35);
+    color: #68d391;
+}
+
+.notif-card-btn.portal-btn:hover {
+    background: #48bb78;
+    color: white;
+}
+
+.notif-card-btn.primary-btn {
+    background: rgba(255, 153, 51, 0.15);
+    border-color: rgba(255, 153, 51, 0.4);
+    color: var(--accent);
+}
+
+.notif-card-btn.primary-btn:hover {
+    background: var(--accent);
+    color: white;
+}
+
+/* Full Notifications Page Styles */
+.notif-page-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 1.25rem;
+}
+
+.notif-page-card {
+    background: var(--glass);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 16px;
+    padding: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s;
+    position: relative;
+    cursor: pointer;
+}
+
+.notif-page-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    border-radius: 16px 0 0 16px;
+}
+
+.notif-page-card.type-announcement::before { background: var(--accent); }
+.notif-page-card.type-portal_live::before  { background: #48bb78; }
+.notif-page-card.type-benefit_update::before { background: #63b3ed; }
+
+.notif-page-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.notif-page-card.unread {
+    background: rgba(0, 51, 102, 0.3);
+    border-color: rgba(0, 100, 200, 0.4);
+}
+
+.notif-filter-btn {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #cbd5e0;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+}
+
+.notif-filter-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+}
+
+.notif-filter-btn.active {
+    background: var(--primary);
+    border-color: var(--accent);
+    color: white;
+    box-shadow: 0 0 12px rgba(255, 153, 51, 0.3);
+}
+
+/* Notification Detail Modal Content */
+.notif-detail-header {
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.notif-detail-tag-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.75rem;
+}
+
+.notif-detail-badge {
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.notif-detail-badge.announcement {
+    background: rgba(255, 153, 51, 0.2);
+    color: var(--accent);
+    border: 1px solid rgba(255, 153, 51, 0.4);
+}
+
+.notif-detail-badge.portal_live {
+    background: rgba(72, 187, 120, 0.2);
+    color: #68d391;
+    border: 1px solid rgba(72, 187, 120, 0.4);
+}
+
+.notif-detail-badge.benefit_update {
+    background: rgba(99, 179, 237, 0.2);
+    color: #90cdf4;
+    border: 1px solid rgba(99, 179, 237, 0.4);
+}
+
+.notif-detail-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0.25rem 0 0.5rem 0;
+    line-height: 1.3;
+}
+
+.notif-detail-content-box {
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin: 1.25rem 0;
+    color: #e2e8f0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+.notif-detail-actions {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================================
+   WORKFLOW PIPELINE STEPPER STYLES
+   User Profile -> NLP Processing -> Eligibility & Scheme Matching -> Recommendations -> Scheme Details -> Application Guidance
+   ============================================================ */
+.workflow-stepper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(10, 20, 40, 0.75);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 0.85rem 1.25rem;
+    margin-bottom: 2rem;
+    overflow-x: auto;
+    gap: 0.5rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+.workflow-step {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 6px 12px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    flex-shrink: 0;
+}
+
+.workflow-step .step-num {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: #cbd5e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 800;
+    transition: all 0.3s;
+}
+
+.workflow-step .step-label {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.workflow-step .step-label strong {
+    font-size: 0.78rem;
+    color: #cbd5e0;
+    white-space: nowrap;
+    transition: color 0.3s;
+}
+
+.workflow-step .step-label small {
+    font-size: 0.65rem;
+    color: #718096;
+    white-space: nowrap;
+}
+
+.workflow-arrow {
+    color: #4a5568;
+    font-size: 0.85rem;
+    user-select: none;
+    flex-shrink: 0;
+}
+
+/* Active Step */
+.workflow-step.active {
+    background: rgba(0, 51, 102, 0.4);
+    border-color: var(--accent);
+    box-shadow: 0 0 15px rgba(255, 153, 51, 0.25);
+}
+
+.workflow-step.active .step-num {
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 153, 51, 0.5);
+    animation: pulseNum 2s infinite;
+}
+
+.workflow-step.active .step-label strong {
+    color: #ffffff;
+}
+
+.workflow-step.active .step-label small {
+    color: var(--accent);
+}
+
+/* Completed Step */
+.workflow-step.completed {
+    background: rgba(72, 187, 120, 0.08);
+    border-color: rgba(72, 187, 120, 0.3);
+}
+
+.workflow-step.completed .step-num {
+    background: #48bb78;
+    color: white;
+}
+
+.workflow-step.completed .step-label strong {
+    color: #68d391;
+}
+
+@keyframes pulseNum {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* NLP Real-Time Bubble in Chat */
+.nlp-insight-bubble {
+    background: linear-gradient(135deg, rgba(10, 25, 50, 0.95), rgba(15, 35, 70, 0.85)) !important;
+    border: 1px solid rgba(255, 153, 51, 0.35) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4) !important;
+    max-width: 90% !important;
+    animation: fadeIn 0.4s ease-out;
+}
+
+/* Recommendation Badges on Scheme Cards */
+.rec-badge {
+    background: linear-gradient(135deg, rgba(255, 153, 51, 0.2), rgba(229, 62, 62, 0.2));
+    border: 1px solid rgba(255, 153, 51, 0.45);
+    color: var(--accent);
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 3px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.3px;
+    box-shadow: 0 0 10px rgba(255, 153, 51, 0.2);
+}
+
+.rec-reason {
+    font-size: 0.75rem;
+    color: #68d391;
+    margin-top: 0.35rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.age-helper-note {
+    font-size: 0.75rem;
+    color: #a0aec0;
+    margin-top: 0.35rem;
+    text-align: center;
+}
+
+

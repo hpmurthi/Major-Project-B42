@@ -1,5 +1,103 @@
 [
   {
+    "id": "test-scheme",
+    "name": "Test Scheme",
+    "category": "Employment",
+    "ministry": "Ministry of Education",
+    "description": "Will get Loan 100000 rupees",
+    "benefits": [
+      "mmmmmmmm"
+    ],
+    "eligibility": {
+      "minAge": 0,
+      "maxAge": 10,
+      "location": "Central",
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Employed",
+        "Teacher"
+      ],
+      "maxIncome": 200000,
+      "disabledOnly": false
+    },
+    "applicationSteps": [
+      "apply"
+    ],
+    "officialLink": "https://www.aicte.gov.in/schemes/students-development-schemes",
+    "applicationMode": "Both",
+    "requiredDocuments": [
+      "apply"
+    ],
+    "deadline": "30-10-2026",
+    "lastUpdated": "16 Oct 2026"
+  },
+  {
+    "id": "pradhan-mantri-surya-ghar-muft-bijli-yojana",
+    "name": "Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+    "category": "Energy & Infrastructure",
+    "ministry": "Ministry of New and Renewable Energy",
+    "description": "National solar rooftop subsidy scheme providing up to 300 units of free electricity every month for residential households.",
+    "benefits": [
+      "Up to 300 units of free electricity per month",
+      "Enhanced subsidy of ₹85,000 directly transferred to beneficiary bank account",
+      "Subsidized loan interest rate capped at 6.5%"
+    ],
+    "eligibility": {
+      "minAge": 18,
+      "maxAge": 125,
+      "location": "Central",
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "All"
+      ],
+      "maxIncome": 1000000,
+      "disabledOnly": false
+    },
+    "applicationSteps": [
+      "Register on the National Portal with electricity consumer number and DISCOM name",
+      "Submit rooftop solar installation application online",
+      "Post installation and net-meter inspection, subsidy is released directly to bank account via DBT within 30 days"
+    ],
+    "officialLink": "https://pmsuryaghar.gov.in/",
+    "applicationMode": "Online",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Recent Electricity Bill",
+      "Bank Account Passbook / Cancelled Cheque",
+      "Proof of House / Roof Ownership"
+    ],
+    "deadline": "Active for FY 2026-27",
+    "lastUpdated": "16 Oct 2026"
+  },
+  {
     "id": "pm-kisan",
     "name": "Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)",
     "category": "Agriculture",

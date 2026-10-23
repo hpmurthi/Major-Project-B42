@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GovNavigator AI | Smart Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/assets/main-qQn7LdVO.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/style-6Q5VfEpe.js">
+  <link rel="stylesheet" crossorigin href="/assets/style-hRrpqR2w.css">
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar no-print">
+            <div class="sidebar-logo">Gov<span>Nav</span></div>
+            <nav class="sidebar-nav">
+                <button class="nav-item active" id="nav-discovery">💬 Discovery</button>
+                <button class="nav-item" id="nav-dashboard">📊 Dashboard</button>
+                <button class="nav-item" id="nav-profile">👤 My Profile</button>
+                <button class="nav-item" id="nav-notifications" style="position: relative;">
+                    🔔 Notifications
+                    <span id="nav-notif-badge" style="display:none; position:absolute; top:8px; right:10px; background:#e53e3e; color:white; font-size:0.65rem; font-weight:700; border-radius:50%; width:18px; height:18px; display:none; align-items:center; justify-content:center; line-height:18px; text-align:center;">0</span>
+                </button>
+                <div class="nav-spacer"></div>
+                <button class="nav-item" id="export-report" title="Download Report">💾 Export PDF</button>
+                <button class="nav-item" id="whatsapp-share" title="Share via WhatsApp" style="color: #48bb78;">📲 WhatsApp Share</button>
+                <button class="nav-item" id="nav-auth-toggle" style="color: var(--accent); border: 1px dashed rgba(255,153,51,0.3); margin-top: 0.5rem;">🔐 Sign In / Register</button>
+                <a href="/admin.html" class="nav-item" style="color: #90cdf4; border: 1px solid rgba(144,205,244,0.25); text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-top: 0.5rem; font-size: 0.85rem;">🛡️ Admin Portal ↗</a>
+            </nav>
+            <div style="margin-top: auto; padding: 1.5rem;">
+                <label for="lang-select" style="font-size: 0.8rem; color: #a0aec0; margin-bottom: 5px; display: block;">Language / ಭಾಷೆ</label>
+                <select id="lang-select" style="width: 100%; background: #0A0C12; color: white; border: 1px solid rgba(255,255,255,0.2); padding: 8px; border-radius: 8px;">
+                    <option value="en">English</option>
+                    <option value="kn">ಕನ್ನಡ (Kannada)</option>
+                    <option value="hi">हिंदी (Hindi)</option>
+                </select>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-view">
+            <header class="top-bar no-print">
+                <div class="search-container">
+                    <input type="text" id="smart-search" placeholder="Ask anything... (e.g., 'farmer money', 'college help')">
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <!-- Notification Bell -->
+                    <button id="notif-bell-btn" title="Notifications" style="position:relative; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.15); color:white; width:40px; height:40px; border-radius:50%; cursor:pointer; font-size:1.1rem; display:flex; align-items:center; justify-content:center; transition:all 0.3s; flex-shrink:0;">
+                        🔔
+                        <span id="notif-badge" style="display:none; position:absolute; top:-3px; right:-3px; background:#e53e3e; color:white; font-size:0.6rem; font-weight:800; border-radius:50%; min-width:18px; height:18px; padding:0 3px; align-items:center; justify-content:center; box-shadow:0 0 8px rgba(229,62,62,0.8); animation: notifPop 0.4s ease;">0</span>
+                    </button>
+                    <div class="user-badge" id="user-badge" style="cursor: pointer;" title="View Account Profile">👤 Guest</div>
+                    <button id="auth-btn" class="auth-header-btn">Sign In</button>
+                </div>
+            </header>
+
+            <section id="content-area">
+                <!-- ============= AI WORKFLOW PIPELINE TRACKER ============= -->
+                <div class="workflow-stepper no-print" id="workflow-stepper">
+                    <div class="workflow-step active" id="step-1">
+                        <div class="step-num">1</div>
+                        <div class="step-label">
+                            <strong>User Profile</strong>
+                            <small>Discovery Input</small>
+                        </div>
+                    </div>
+                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-step" id="step-2">
+                        <div class="step-num">2</div>
+                        <div class="step-label">
+                            <strong>NLP Processing</strong>
+                            <small>Semantic Entity Match</small>
+                        </div>
+                    </div>
+                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-step" id="step-3">
+                        <div class="step-num">3</div>
+                        <div class="step-label">
+                            <strong>Eligibility Matching</strong>
+                            <small>Gov Rule Engine</small>
+                        </div>
+                    </div>
+                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-step" id="step-4">
+                        <div class="step-num">4</div>
+                        <div class="step-label">
+                            <strong>Recommendations</strong>
+                            <small>AI Fit Ranking</small>
+                        </div>
+                    </div>
+                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-step" id="step-5">
+                        <div class="step-num">5</div>
+                        <div class="step-label">
+                            <strong>Scheme Details</strong>
+                            <small>Live Portal Specs</small>
+                        </div>
+                    </div>
+                    <div class="workflow-arrow">→</div>
+                    <div class="workflow-step" id="step-6">
+                        <div class="step-num">6</div>
+                        <div class="step-label">
+                            <strong>Application Guidance</strong>
+                            <small>DigiLocker & Centers</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat View (Default) -->
+                <div id="chat-view" class="view-active no-print">
+                    <div id="app" class="chat-card" style="display:flex; flex-direction:column; max-height:80vh;">
+                        <div id="chat-history" class="chat-history">
+                            <div class="chat-msg bot">Welcome to GovNavigator AI! I will ask you a few questions to find the perfect schemes for you.</div>
+                        </div>
+                        <div id="interaction-area"></div>
+                    </div>
+                </div>
+
+                <!-- Dashboard View -->
+                <div id="dashboard-view" class="view-hidden">
+                    <div id="printable-report">
+                        <div class="dashboard-grid no-print">
+                            <div class="stat-card" id="profile-summary">
+                                <h3>Profile Summary</h3>
+                                <div id="summary-content">Complete discovery to see your profile.</div>
+                            </div>
+                            <div class="stat-card">
+                                <h3>Eligible Schemes</h3>
+                                <div id="schemes-count" class="big-number">0</div>
+                            </div>
+                        </div>
+                        
+                        <div class="report-header only-print">
+                            <h1>Government Scheme Eligibility Report</h1>
+                            <p>Generated by GovNavigator AI for a personalized user profile.</p>
+                        </div>
+
+                        <h2 class="section-title">Matched Schemes for You</h2>
+                        <div id="results" class="results-grid">
+                            <!-- Cards injected here -->
+                        </div>
+
+                        <div class="disclaimer only-print">
+                            <small>Disclaimer: This report is for informational purposes only based on the data provided. Actual eligibility is subject to verification by the respective government departments.</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile View -->
+                <div id="profile-view" class="view-hidden">
+                    <div class="chat-card" style="max-width: 700px;">
+                        <!-- Citizen Account Card -->
+                        <div id="profile-account-card">
+                            <!-- Injected by main.js -->
+                        </div>
+
+                        <div style="text-align: center; margin: 1.5rem 0 1rem 0;">
+                            <h3 style="margin-bottom: 0.25rem;">📋 Scheme Discovery Profile</h3>
+                            <p style="color: #a0aec0; font-size: 0.85rem;">Demographic & socio-economic criteria for scheme eligibility matching.</p>
+                        </div>
+                        
+                        <div id="profile-details-full" class="stat-card" style="background: rgba(255,255,255,0.03); margin-bottom: 1.5rem;">
+                            <!-- Data injected here -->
+                        </div>
+
+                        <!-- Saved Schemes in User Database Record -->
+                        <div id="profile-saved-schemes-card" style="margin-bottom: 1.5rem; text-align: left;">
+                            <!-- Injected by main.js -->
+                        </div>
+
+                        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                            <button id="reset-profile" class="option-btn" style="background: #e53e3e;">Retake Scheme Discovery</button>
+                            <button id="profile-auth-action" class="option-btn" style="background: var(--primary);">Sign In / Register</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notifications View (Full Page) -->
+                <div id="notifications-view" class="view-hidden">
+                    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1.5rem;">
+                        <div>
+                            <h2 style="margin:0; font-size:1.6rem; display:flex; align-items:center; gap:0.6rem;">
+                                🔔 Scheme Updates & Official Notifications
+                            </h2>
+                            <p style="margin:0.35rem 0 0 0; color:#a0aec0; font-size:0.9rem;">
+                                Real-time announcements, benefit revisions, and portal status updates detected directly from official government links.
+                            </p>
+                        </div>
+                        <div style="display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap;">
+                            <button id="notif-page-refresh" class="notif-action-btn" style="padding:8px 14px; font-weight:600; background:rgba(255,153,51,0.15); border-color:var(--accent); color:var(--accent);">
+                                🔄 Check Portals Now
+                            </button>
+                            <button id="notif-page-mark-read" class="notif-action-btn" style="padding:8px 14px;">
+                                ✔ Mark All Read
+                            </button>
+                            <button id="notif-page-clear" class="notif-action-btn" style="padding:8px 14px; color:#fc8181;">
+                                🗑 Clear All
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Filter Tabs -->
+                    <div class="notif-filters-bar" style="display:flex; gap:0.6rem; margin-bottom:1.25rem; flex-wrap:wrap;">
+                        <button class="notif-filter-btn active" data-filter="all">All Updates (<span id="count-all">0</span>)</button>
+                        <button class="notif-filter-btn" data-filter="announcement">📢 Announcements (<span id="count-ann">0</span>)</button>
+                        <button class="notif-filter-btn" data-filter="benefit_update">💰 Benefit Updates (<span id="count-ben">0</span>)</button>
+                        <button class="notif-filter-btn" data-filter="portal_live">🌐 Portal Status (<span id="count-live">0</span>)</button>
+                    </div>
+
+                    <!-- Status banner -->
+                    <div id="notif-page-status-banner" style="background:rgba(0,51,102,0.3); border:1px solid rgba(0,100,200,0.3); border-radius:12px; padding:0.8rem 1.2rem; margin-bottom:1.5rem; font-size:0.85rem; color:#cbd5e0; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem;">
+                        <span id="notif-page-status-text">⏳ Monitoring official portals for updates...</span>
+                        <span style="font-size:0.75rem; color:#718096;">⚡ Live Scraper connected to official portal links</span>
+                    </div>
+
+                    <!-- Notifications List Container -->
+                    <div id="notif-page-list" class="notif-page-grid">
+                        <!-- Injected by main.js -->
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Scheme Detail Modal -->
+    <div id="scheme-modal" class="modal-overlay hidden-modal" style="z-index: 10000;">
+        <div class="modal-content">
+            <button id="close-modal" class="close-btn">&times;</button>
+            <div id="modal-body">
+                <!-- Data injected here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Detail Modal (Full Notice View) -->
+    <div id="notif-detail-modal" class="modal-overlay hidden-modal" style="z-index: 10001;">
+        <div class="modal-content" style="max-width: 650px; padding: 2.2rem;">
+            <button id="close-notif-detail-modal" class="close-btn">&times;</button>
+            <div id="notif-detail-body">
+                <!-- Data injected here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Auth Modal (Sign In / Register) -->
+    <div id="auth-modal" class="modal-overlay hidden-modal">
+        <div class="modal-content" style="max-width: 480px; padding: 2.5rem;">
+            <button id="close-auth-modal" class="close-btn">&times;</button>
+            <div style="text-align: center; margin-bottom: 1.5rem;">
+                <h2 id="auth-modal-title" style="margin-bottom: 0.5rem;">GovNav Citizen Portal</h2>
+                <p style="color: #a0aec0; font-size: 0.85rem;">Sign in or create your Citizen Account to save your eligible schemes & documents.</p>
+            </div>
+
+            <!-- Auth Tabs -->
+            <div class="auth-tabs">
+                <button type="button" id="tab-login" class="auth-tab-btn active">Sign In</button>
+                <button type="button" id="tab-signup" class="auth-tab-btn">Create Account</button>
+            </div>
+
+            <div id="auth-error" class="auth-error-msg"></div>
+
+            <!-- Login Form -->
+            <form id="login-form">
+                <div class="auth-form-group">
+                    <label for="login-email">Email Address</label>
+                    <input type="email" id="login-email" class="auth-input" placeholder="e.g., citizen@example.com" required autocomplete="email">
+                </div>
+                <div class="auth-form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" class="auth-input" placeholder="••••••••" required autocomplete="current-password">
+                </div>
+                <button type="submit" class="option-btn" style="width: 100%; margin: 1rem 0 0 0; background: linear-gradient(135deg, var(--primary), var(--accent));">
+                    Sign In
+                </button>
+            </form>
+
+            <!-- Sign Up Form -->
+            <form id="signup-form" style="display: none;">
+                <div class="auth-form-group">
+                    <label for="signup-name">Full Name</label>
+                    <input type="text" id="signup-name" class="auth-input" placeholder="e.g., Rajesh Sharma" required autocomplete="name">
+                </div>
+                <div class="auth-form-group">
+                    <label for="signup-email">Email Address</label>
+                    <input type="email" id="signup-email" class="auth-input" placeholder="e.g., rajesh@example.com" required autocomplete="email">
+                </div>
+                <div class="auth-form-group">
+                    <label for="signup-password">Password (Standard Criteria Required)</label>
+                    <input type="password" id="signup-password" class="auth-input" placeholder="e.g., Citizen@2026#" required autocomplete="new-password">
+                    <div id="password-checklist" style="margin-top: 0.6rem; font-size: 0.75rem; color: #a0aec0; background: rgba(0,0,0,0.35); border: 1px solid rgba(255,255,255,0.08); padding: 0.75rem; border-radius: 8px;">
+                        <div style="font-weight: 700; margin-bottom: 0.35rem; color: #cbd5e0;">Standard Security Requirements:</div>
+                        <div id="check-len" style="color: #fc8181; transition: color 0.2s;">✖ At least 8 characters</div>
+                        <div id="check-upper" style="color: #fc8181; transition: color 0.2s;">✖ At least one uppercase letter (A-Z)</div>
+                        <div id="check-lower" style="color: #fc8181; transition: color 0.2s;">✖ At least one lowercase letter (a-z)</div>
+                        <div id="check-num" style="color: #fc8181; transition: color 0.2s;">✖ At least one number (0-9)</div>
+                        <div id="check-spec" style="color: #fc8181; transition: color 0.2s;">✖ At least one special symbol (!@#$%^&*)</div>
+                    </div>
+                </div>
+                <button type="submit" class="option-btn" style="width: 100%; margin: 1rem 0 0 0; background: linear-gradient(135deg, var(--primary), var(--accent));">
+                    Create Citizen Account
+                </button>
+            </form>
+
+            <!-- 1-Click Fast Demo Accounts for Hackathon Presentation -->
+            <div class="demo-login-box">
+                <div style="font-size: 0.75rem; text-transform: uppercase; color: #a0aec0; letter-spacing: 1px; margin-bottom: 0.5rem;">
+                    ⚡ Quick Demo Accounts (1-Click Test)
+                </div>
+                <div style="display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap;">
+                    <button type="button" id="demo-farmer-btn" class="demo-account-btn">🌾 Farmer (Ramesh)</button>
+                    <button type="button" id="demo-student-btn" class="demo-account-btn">🎓 Student (Pooja)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============= NOTIFICATION PANEL (Slide-in Drawer) ============= -->
+    <div id="notif-panel-overlay" style="display:none; position:fixed; inset:0; z-index:9000; background:rgba(0,0,0,0.5); backdrop-filter:blur(4px);" onclick="document.getElementById('notif-panel-overlay').style.display='none'"></div>
+    <div id="notif-panel" class="notif-panel">
+        <div class="notif-panel-header">
+            <div style="display:flex; align-items:center; gap:0.6rem;">
+                <span style="font-size:1.3rem;">🔔</span>
+                <h3 style="margin:0; font-size:1.05rem;">Scheme Notifications</h3>
+                <span id="notif-panel-count" style="background:rgba(229,62,62,0.2); color:#fc8181; border:1px solid rgba(229,62,62,0.4); font-size:0.7rem; font-weight:700; padding:2px 8px; border-radius:12px; display:none;">0 new</span>
+            </div>
+            <div style="display:flex; gap:0.4rem; align-items:center;">
+                <button id="notif-open-full-btn" class="notif-action-btn" title="Open as full page view">Full Page ↗</button>
+                <button id="notif-mark-all-btn" class="notif-action-btn" title="Mark all read">✔ Read</button>
+                <button id="notif-clear-btn" class="notif-action-btn" style="color:#fc8181;" title="Clear notifications">🗑</button>
+                <button id="notif-panel-close" style="background:transparent; border:none; color:#a0aec0; font-size:1.4rem; cursor:pointer; line-height:1; padding:2px 6px;" title="Close">&times;</button>
+            </div>
+        </div>
+        <div id="notif-panel-body" class="notif-panel-body">
+            <!-- Injected by main.js -->
+            <div class="notif-empty-state">
+                <div style="font-size:2.5rem; margin-bottom:0.75rem;">🔕</div>
+                <div style="color:#a0aec0;">No notifications yet.<br>We'll alert you when your schemes have updates from their official portals.</div>
+            </div>
+        </div>
+        <div class="notif-panel-footer">
+            <span id="notif-polling-status" style="font-size:0.75rem; color:#718096;">⏳ Checking official portals on startup...</span>
+        </div>
+    </div>
+
+    <!-- ============= TOAST POPUP CONTAINER ============= -->
+    <div id="toast-container" style="position:fixed; bottom:1.5rem; right:1.5rem; z-index:9999; display:flex; flex-direction:column; gap:0.6rem; max-width:380px; pointer-events:none;"></div>
+
+
+</body>
+</html>

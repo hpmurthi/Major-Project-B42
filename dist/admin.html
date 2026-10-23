@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GovNav Admin Console | Welfare & Schemes Administration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --admin-primary: #004b87;
+            --admin-accent: #00b4d8;
+            --admin-success: #10b981;
+            --admin-warning: #f59e0b;
+            --admin-danger: #ef4444;
+            --admin-card-bg: rgba(13, 21, 38, 0.85);
+            --admin-border: rgba(255, 255, 255, 0.12);
+        }
+
+        /* Essential fixes for scrolling & click interactions in admin portal */
+        html, body {
+            overflow-y: auto !important;
+            overflow-x: hidden !important;
+            height: auto !important;
+            min-height: 100vh !important;
+            max-height: none !important;
+            margin: 0;
+            padding: 0;
+            background: #080c14;
+        }
+
+        .admin-wrapper {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background: radial-gradient(circle at 10% 20%, rgba(0, 75, 135, 0.35) 0%, rgba(10, 12, 18, 0.98) 90%),
+                        radial-gradient(circle at 90% 80%, rgba(0, 180, 216, 0.18) 0%, transparent 60%);
+            color: #f7fafc;
+            overflow-x: hidden;
+            overflow-y: visible;
+        }
+
+        button, a, select, input, textarea, summary {
+            cursor: pointer;
+            position: relative;
+            z-index: 5;
+            pointer-events: auto !important;
+            font-family: inherit;
+        }
+
+        /* Top sticky navigation */
+        .admin-nav {
+            padding: 1rem 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(10, 15, 29, 0.92);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--admin-border);
+            position: sticky;
+            top: 0;
+            z-index: 200;
+        }
+
+        .admin-brand {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .admin-logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .admin-logo span { color: var(--admin-accent); }
+
+        .admin-badge {
+            background: rgba(0, 180, 216, 0.15);
+            border: 1px solid var(--admin-accent);
+            color: var(--admin-accent);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Tab Navigation Bar */
+        .admin-tab-nav {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+            padding-bottom: 0.5rem;
+        }
+
+        .admin-tab-btn {
+            background: transparent;
+            border: none;
+            color: #a0aec0;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            transition: all 0.2s ease;
+        }
+
+        .admin-tab-btn:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .admin-tab-btn.active {
+            color: white;
+            background: linear-gradient(135deg, rgba(0, 75, 135, 0.7), rgba(0, 180, 216, 0.5));
+            border: 1px solid var(--admin-accent);
+            box-shadow: 0 4px 18px rgba(0, 180, 216, 0.25);
+        }
+
+        .tab-counter {
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+        }
+
+        /* KPI Cards */
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .kpi-card {
+            background: var(--admin-card-bg);
+            border: 1px solid var(--admin-border);
+            border-radius: 16px;
+            padding: 1.4rem;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .kpi-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(0, 180, 216, 0.45);
+        }
+
+        .kpi-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--admin-accent);
+        }
+
+        .kpi-title {
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #a0aec0;
+            margin-bottom: 0.4rem;
+        }
+
+        .kpi-value {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: white;
+            line-height: 1.1;
+        }
+
+        .kpi-subtitle {
+            font-size: 0.78rem;
+            color: #718096;
+            margin-top: 0.4rem;
+        }
+
+        /* Controls Card / Filter Bar */
+        .admin-controls-card {
+            background: var(--admin-card-bg);
+            border: 1px solid var(--admin-border);
+            border-radius: 16px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .admin-search-input {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            color: white;
+            padding: 10px 16px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            width: 320px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .admin-search-input:focus {
+            border-color: var(--admin-accent);
+            box-shadow: 0 0 10px rgba(0, 180, 216, 0.3);
+        }
+
+        .admin-select {
+            background: #0f172a;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            color: white;
+            padding: 10px 14px;
+            border-radius: 10px;
+            font-size: 0.85rem;
+            outline: none;
+            cursor: pointer;
+        }
+
+        /* Scheme Cards Grid */
+        .schemes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .scheme-admin-card {
+            background: var(--admin-card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.25s ease;
+            position: relative;
+        }
+
+        .scheme-admin-card:hover {
+            border-color: rgba(0, 180, 216, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+        }
+
+        .scheme-header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .scheme-tag {
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .scheme-tag.cat {
+            background: rgba(0, 180, 216, 0.15);
+            color: var(--admin-accent);
+            border: 1px solid rgba(0, 180, 216, 0.35);
+        }
+
+        .scheme-tag.mode {
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--admin-success);
+            border: 1px solid rgba(16, 185, 129, 0.35);
+        }
+
+        .scheme-tag.mode-both {
+            background: rgba(0, 180, 216, 0.18);
+            color: #38bdf8;
+            border: 1px solid rgba(0, 180, 216, 0.4);
+        }
+
+        .scheme-tag.mode-online {
+            background: rgba(16, 185, 129, 0.18);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.4);
+        }
+
+        .scheme-tag.mode-offline {
+            background: rgba(245, 158, 11, 0.18);
+            color: #fbbf24;
+            border: 1px solid rgba(245, 158, 11, 0.4);
+        }
+
+        .scheme-tag.mode-csc {
+            background: rgba(168, 85, 247, 0.18);
+            color: #c084fc;
+            border: 1px solid rgba(168, 85, 247, 0.4);
+        }
+
+        .quick-occ-pill {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            color: #cbd5e0;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.74rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .quick-occ-pill:hover {
+            background: var(--admin-accent);
+            color: #000;
+            border-color: var(--admin-accent);
+            transform: translateY(-1px);
+        }
+
+        .scheme-tag.central {
+            background: rgba(245, 158, 11, 0.15);
+            color: var(--admin-warning);
+            border: 1px solid rgba(245, 158, 11, 0.35);
+        }
+
+        .citizen-card {
+            background: var(--admin-card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 1.25rem;
+            transition: all 0.25s ease;
+        }
+
+        .citizen-card:hover {
+            border-color: rgba(0, 180, 216, 0.35);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+        }
+
+        .demographic-pill {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.78rem;
+            color: #cbd5e0;
+            display: inline-block;
+            margin: 2px;
+        }
+
+        .demographic-pill strong {
+            color: white;
+        }
+
+        .action-btn-sm {
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--admin-primary), var(--admin-accent));
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 180, 216, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 180, 216, 0.45);
+        }
+
+        .btn-edit {
+            background: rgba(0, 180, 216, 0.15);
+            border: 1px solid rgba(0, 180, 216, 0.4);
+            color: var(--admin-accent);
+        }
+
+        .btn-edit:hover {
+            background: var(--admin-accent);
+            color: #000;
+        }
+
+        .btn-bulletin {
+            background: rgba(245, 158, 11, 0.15);
+            border: 1px solid rgba(245, 158, 11, 0.4);
+            color: #fcd34d;
+        }
+
+        .btn-bulletin:hover {
+            background: var(--admin-warning);
+            color: #000;
+        }
+
+        .btn-delete {
+            background: rgba(239, 68, 68, 0.15);
+            border: 1px solid rgba(239, 68, 68, 0.35);
+            color: #f87171;
+        }
+
+        .btn-delete:hover {
+            background: #ef4444;
+            color: white;
+        }
+
+        .btn-export {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        .btn-export:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        /* Modal Styles */
+        .admin-modal-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(12px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            padding: 1.5rem;
+            overflow-y: auto;
+        }
+
+        .admin-modal-box {
+            background: #0d1526;
+            border: 1px solid rgba(0, 180, 216, 0.35);
+            border-radius: 20px;
+            max-width: 860px;
+            width: 100%;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+            animation: modalFadeIn 0.3s ease-out;
+        }
+
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: scale(0.96) translateY(10px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        .admin-modal-header {
+            padding: 1.25rem 2rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.25);
+            border-radius: 20px 20px 0 0;
+        }
+
+        .admin-modal-body {
+            padding: 2rem;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        .admin-modal-footer {
+            padding: 1.25rem 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+            background: rgba(0, 0, 0, 0.25);
+            border-radius: 0 0 20px 20px;
+        }
+
+        .form-grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+        }
+
+        .form-grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-group-admin {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group-admin label {
+            display: block;
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: #cbd5e0;
+            margin-bottom: 0.4rem;
+            letter-spacing: 0.3px;
+        }
+
+        .form-group-admin input[type="text"],
+        .form-group-admin input[type="number"],
+        .form-group-admin input[type="url"],
+        .form-group-admin select,
+        .form-group-admin textarea {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            color: white;
+            padding: 10px 14px;
+            border-radius: 10px;
+            font-size: 0.88rem;
+            outline: none;
+            box-sizing: border-box;
+            transition: border-color 0.2s;
+        }
+
+        .form-group-admin input:focus,
+        .form-group-admin select:focus,
+        .form-group-admin textarea:focus {
+            border-color: var(--admin-accent);
+            box-shadow: 0 0 10px rgba(0, 180, 216, 0.3);
+        }
+
+        .gazette-callout-box {
+            background: linear-gradient(135deg, rgba(0, 75, 135, 0.25), rgba(0, 180, 216, 0.15));
+            border: 1px solid rgba(0, 180, 216, 0.35);
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .toast-admin-feedback {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #0f1b33;
+            border: 1px solid var(--admin-accent);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.7);
+            z-index: 20000;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 600;
+            animation: slideInUp 0.3s ease-out;
+        }
+
+        @keyframes slideInUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .hidden { display: none !important; }
+    </style>
+  <script type="module" crossorigin src="/assets/admin-DLT-WlRx.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/style-6Q5VfEpe.js">
+  <link rel="stylesheet" crossorigin href="/assets/style-hRrpqR2w.css">
+</head>
+<body>
+    <div class="admin-wrapper">
+        <!-- Top Navigation -->
+        <header class="admin-nav">
+            <div class="admin-brand">
+                <div class="admin-logo">Gov<span>Nav</span></div>
+                <div class="admin-badge">Admin Governance Console</div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="/" target="_blank" style="color: #cbd5e0; text-decoration: none; font-size: 0.88rem; display: flex; align-items: center; gap: 0.4rem; padding: 6px 12px; border-radius: 8px; background: rgba(255,255,255,0.06);">
+                    🌐 Citizen Portal ↗
+                </a>
+                <div id="admin-user-info" style="display: none; align-items: center; gap: 0.75rem;">
+                    <button id="nav-btn-add-scheme" class="action-btn-sm btn-primary" style="padding: 7px 14px;">
+                        ➕ Add Scheme
+                    </button>
+                    <span id="admin-email-display" style="font-size: 0.85rem; color: #a0aec0;">admin@gov.in</span>
+                    <button id="admin-logout-btn" class="action-btn-sm btn-delete">Log Out</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Body -->
+        <main style="max-width: 1360px; width: 100%; margin: 0 auto; padding: 2rem 1.5rem; flex: 1;">
+            
+            <!-- Admin Login Gate -->
+            <section id="admin-login-section" style="max-width: 480px; margin: 3rem auto;">
+                <div class="kpi-card" style="padding: 2.5rem; text-align: center;">
+                    <div style="font-size: 3.5rem; margin-bottom: 1rem;">🛡️</div>
+                    <h2 style="margin: 0 0 0.5rem 0; font-size: 1.6rem;">Welfare Admin Authentication</h2>
+                    <p style="color: #a0aec0; font-size: 0.85rem; margin-bottom: 2rem;">
+                        Authorized official access to scheme formulation, citizen database, and policy gazette dispatch.
+                    </p>
+                    
+                    <div id="admin-auth-error" style="display: none; background: rgba(239,68,68,0.15); border-left: 3px solid #ef4444; color: #fca5a5; padding: 10px; border-radius: 6px; font-size: 0.85rem; margin-bottom: 1.25rem; text-align: left;"></div>
+
+                    <form id="admin-login-form">
+                        <div class="form-group-admin" style="text-align: left;">
+                            <label for="admin-email">Official Admin Email</label>
+                            <input type="email" id="admin-email" value="admin@gov.in" placeholder="admin@gov.in" required>
+                        </div>
+                        <div class="form-group-admin" style="text-align: left;">
+                            <label for="admin-password">Secure Password (Standard Criteria)</label>
+                            <input type="password" id="admin-password" placeholder="••••••••" required>
+                        </div>
+                        <button type="submit" class="action-btn-sm btn-primary" style="width: 100%; justify-content: center; padding: 12px; margin-top: 1rem; font-size: 0.95rem;">
+                            Access Admin Dashboard
+                        </button>
+                    </form>
+
+                    <div style="margin-top: 1.75rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.25rem;">
+                        <button type="button" id="admin-demo-btn" class="action-btn-sm" style="width: 100%; justify-content: center; padding: 10px; font-weight: 600; color: var(--admin-accent); border: 1px solid rgba(0,180,216,0.3); background: rgba(0,180,216,0.06);">
+                            ⚡ 1-Click Demo Admin Login (admin@gov.in)
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Admin Protected Dashboard -->
+            <section id="admin-dashboard-section" style="display: none;">
+                
+                <!-- Executive Header -->
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.75rem;">
+                    <div>
+                        <h1 style="font-size: 2.1rem; font-weight: 800; margin: 0 0 0.4rem 0;">Welfare Governance & Schemes Console</h1>
+                        <p style="color: #a0aec0; margin: 0; font-size: 0.92rem;">
+                            Human resource management: Add & update welfare schemes manually, publish gazette notices directly to citizen notification sector, and oversee citizen allocations.
+                        </p>
+                    </div>
+                    <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                        <button id="admin-add-scheme-btn" class="action-btn-sm btn-primary" style="padding: 10px 18px;">
+                            ➕ Formulate New Scheme
+                        </button>
+                        <button id="admin-download-json-btn" class="action-btn-sm btn-export" style="padding: 10px 16px;">
+                            📥 Export Citizens JSON
+                        </button>
+                        <button id="admin-export-csv-btn" class="action-btn-sm btn-export" style="padding: 10px 16px;">
+                            📄 Export CSV Report
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Primary Tab Navigation -->
+                <div class="admin-tab-nav">
+                    <button class="admin-tab-btn active" id="tab-btn-schemes">
+                        🏛 Government Schemes Management
+                        <span class="tab-counter" id="tab-schemes-count">0</span>
+                    </button>
+                    <button class="admin-tab-btn" id="tab-btn-citizens">
+                        👥 Citizen Welfare Database
+                        <span class="tab-counter" id="tab-citizens-count">0</span>
+                    </button>
+                </div>
+
+                <!-- ============================================================
+                     TAB 1: SCHEMES MANAGEMENT (Manual Add / Edit / Gazette Notice)
+                     ============================================================ -->
+                <div id="tab-content-schemes">
+                    <!-- Scheme Metrics KPI Cards -->
+                    <div class="kpi-grid">
+                        <div class="kpi-card">
+                            <div class="kpi-title">Total Active Schemes</div>
+                            <div class="kpi-value" id="stat-total-schemes-count">0</div>
+                            <div class="kpi-subtitle">Directly loaded into welfare engine</div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-title">Welfare Categories</div>
+                            <div class="kpi-value" id="stat-total-categories-count" style="color: var(--admin-accent);">0</div>
+                            <div class="kpi-subtitle">Agriculture, Health, Education, Housing...</div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-title">Central vs State Schemes</div>
+                            <div class="kpi-value" id="stat-central-state-ratio" style="font-size: 1.8rem; color: var(--admin-warning);">--</div>
+                            <div class="kpi-subtitle">Pan-India vs Regional welfare coverage</div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-title">Policy Dispatch Mode</div>
+                            <div class="kpi-value" style="font-size: 1.4rem; color: var(--admin-success); margin-top: 0.35rem;">
+                                Live Gazette Sync
+                            </div>
+                            <div class="kpi-subtitle">Officer manual entry active</div>
+                        </div>
+                    </div>
+
+                    <!-- Schemes Filter & Controls Bar -->
+                    <div class="admin-controls-card">
+                        <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; flex: 1;">
+                            <input type="text" id="scheme-search-input" class="admin-search-input" placeholder="Search schemes by name, ministry, keyword, benefit...">
+                            
+                            <select id="filter-scheme-category" class="admin-select">
+                                <option value="">All Categories</option>
+                            </select>
+
+                            <select id="filter-scheme-mode" class="admin-select">
+                                <option value="">All Application Modes</option>
+                                <option value="Both">Both (Online & Offline)</option>
+                                <option value="Online">Online Only</option>
+                                <option value="Offline">Offline Only</option>
+                                <option value="CSC Center">CSC / Digital Seva Kendra</option>
+                                <option value="Bank Branch">Direct Bank Branch</option>
+                                <option value="Gram Panchayat">Gram Panchayat / Municipal Office</option>
+                                <option value="Post Office">Post Office</option>
+                                <option value="Mobile App">Mobile App</option>
+                                <option value="Other">Other Mode</option>
+                            </select>
+
+                            <select id="filter-scheme-occupation" class="admin-select">
+                                <option value="">All Target Occupations</option>
+                                <option value="Farmer">Farmer / Agriculture</option>
+                                <option value="Student">Student / Scholar</option>
+                                <option value="Entrepreneur">Entrepreneur / Business</option>
+                                <option value="Street Vendor">Street Vendor / Food Stall / Merchant</option>
+                                <option value="Artisan">Artisan / Weaver / Craftsman</option>
+                                <option value="Daily Wager">Daily Wager / Construction Worker</option>
+                                <option value="Employed">Employed / Salaried</option>
+                                <option value="Self-Employed">Self-Employed / Freelancer</option>
+                                <option value="Unemployed">Unemployed / Job Seeker</option>
+                                <option value="Homemaker">Homemaker</option>
+                                <option value="Healthcare Worker">Healthcare Worker / ASHA</option>
+                                <option value="Sanitation Worker">Sanitation Worker</option>
+                                <option value="Senior Citizen">Senior Citizen / Pensioner</option>
+                                <option value="Ex-Serviceman">Ex-Serviceman / Defense</option>
+                                <option value="Other">Other / Custom</option>
+                            </select>
+
+                            <select id="filter-scheme-location" class="admin-select">
+                                <option value="">All Regions / States</option>
+                                <option value="Central">Central (Pan-India)</option>
+                            </select>
+                        </div>
+
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <span style="color: #a0aec0; font-size: 0.85rem;" id="schemes-filtered-count-display">
+                                Showing all schemes
+                            </span>
+                            <button id="btn-quick-new-scheme" class="action-btn-sm btn-primary">
+                                ➕ Add Scheme
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Schemes Records Grid -->
+                    <div id="schemes-records-container" class="schemes-grid">
+                        <!-- Populated by admin.js -->
+                    </div>
+                </div>
+
+                <!-- ============================================================
+                     TAB 2: CITIZEN WELFARE DATABASE
+                     ============================================================ -->
+                <div id="tab-content-citizens" class="hidden">
+                    <!-- Citizen Database KPIs -->
+                    <div class="kpi-grid">
+                        <div class="kpi-card">
+                            <div class="kpi-title">Total Registered Citizens</div>
+                            <div class="kpi-value" id="stat-total-citizens">0</div>
+                            <div class="kpi-subtitle">Stored in data/users.json</div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-title">Total Scheme Matches</div>
+                            <div class="kpi-value" id="stat-total-matches" style="color: var(--admin-accent);">0</div>
+                            <div class="kpi-subtitle">Demographic allocations across India</div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-title">Avg Schemes Per Citizen</div>
+                            <div class="kpi-value" id="stat-avg-schemes" style="color: var(--admin-success);">0</div>
+                            <div class="kpi-subtitle">Matching recommendations</div>
+                        </div>
+                        <div class="kpi-card">
+                            <div class="kpi-title">Server Storage State</div>
+                            <div class="kpi-value" style="font-size: 1.4rem; color: #f6ad55; margin-top: 0.35rem;">data/users.json</div>
+                            <div class="kpi-subtitle">Persistent Citizen Database</div>
+                        </div>
+                    </div>
+
+                    <!-- Search & Filters Toolbar -->
+                    <div class="admin-controls-card">
+                        <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; flex: 1;">
+                            <input type="text" id="admin-search" class="admin-search-input" placeholder="Search citizen by name, email, district, state...">
+                            
+                            <select id="filter-occupation" class="admin-select">
+                                <option value="">All Occupations</option>
+                                <option value="Farmer">Farmer</option>
+                                <option value="Student">Student</option>
+                                <option value="Entrepreneur">Entrepreneur</option>
+                                <option value="Street Vendor">Street Vendor</option>
+                                <option value="Artisan">Artisan</option>
+                                <option value="Daily Wager">Daily Wager</option>
+                                <option value="Employed">Employed</option>
+                            </select>
+
+                            <select id="filter-state" class="admin-select">
+                                <option value="">All States / UTs</option>
+                            </select>
+                        </div>
+
+                        <div style="color: #a0aec0; font-size: 0.85rem;" id="filtered-count-display">
+                            Showing all citizens
+                        </div>
+                    </div>
+
+                    <!-- Citizen Records Container -->
+                    <div id="citizens-records-container">
+                        <!-- Populated by admin.js -->
+                    </div>
+                </div>
+
+            </section>
+        </main>
+    </div>
+
+    <!-- ============================================================
+         MODAL: FORMULATE / EDIT OFFICIAL GOVERNMENT SCHEME
+         ============================================================ -->
+    <div id="admin-scheme-modal" class="admin-modal-backdrop hidden">
+        <div class="admin-modal-box">
+            <div class="admin-modal-header">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <span style="font-size: 1.7rem;">🏛️</span>
+                    <div>
+                        <h3 id="modal-scheme-title" style="margin: 0; font-size: 1.25rem; color: white;">Formulate Official Scheme</h3>
+                        <p style="margin: 2px 0 0 0; font-size: 0.78rem; color: #a0aec0;">
+                            Authoritative manual entry & policy revision — dispatches directly to citizen profiles when scrapers fail.
+                        </p>
+                    </div>
+                </div>
+                <button type="button" id="close-scheme-modal-btn" style="background: none; border: none; color: #a0aec0; font-size: 1.8rem; line-height: 1; cursor: pointer;">&times;</button>
+            </div>
+
+            <form id="admin-scheme-form" style="display: flex; flex-direction: column; flex: 1; overflow: hidden;">
+                <div class="admin-modal-body">
+                    <input type="hidden" id="form-scheme-id" value="">
+
+                    <!-- Section 1: Core Scheme Metadata -->
+                    <div style="font-size: 0.82rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--admin-accent); margin-bottom: 0.75rem;">
+                        1. Primary Identification & Administration
+                    </div>
+
+                    <div class="form-grid-2">
+                        <div class="form-group-admin">
+                            <label for="form-scheme-name">Official Scheme Name *</label>
+                            <input type="text" id="form-scheme-name" placeholder="e.g. Pradhan Mantri Surya Ghar: Muft Bijli Yojana" required>
+                        </div>
+                        <div class="form-group-admin">
+                            <label for="form-scheme-category">Welfare Category *</label>
+                            <select id="form-scheme-category" required>
+                                <option value="Agriculture">Agriculture & Farming</option>
+                                <option value="Education">Education & Scholarships</option>
+                                <option value="Health">Healthcare & Medical Relief</option>
+                                <option value="Housing">Housing & Shelter (PMAY)</option>
+                                <option value="Energy & Infrastructure">Energy & Infrastructure (Solar, Power)</option>
+                                <option value="Finance">Financial Inclusion, Banking & Loans</option>
+                                <option value="Employment">Employment, Livelihood & Labor (MGNREGA)</option>
+                                <option value="Entrepreneurship">Entrepreneurship, Startups & MSME</option>
+                                <option value="Skill Development">Skill Development & Vocational Training</option>
+                                <option value="Women Empowerment">Women Empowerment & Maternity Support</option>
+                                <option value="Social Welfare">Social Welfare, Pensions & Senior Citizens</option>
+                                <option value="Social Security">Social Security & Insurance</option>
+                                <option value="Health & Welfare">Health & Welfare</option>
+                                <option value="Food Security">Food Security & PDS Ration</option>
+                                <option value="Utility Subsidy">Utility Subsidy (Water, LPG Gas, Sanitation)</option>
+                                <option value="Transport">Transport & Electric Mobility (FAME)</option>
+                                <option value="Fisheries & Animal Husbandry">Fisheries, Dairy & Animal Husbandry</option>
+                                <option value="Tribal & Minority Affairs">Tribal & Minority Affairs (SC/ST/OBC)</option>
+                                <option value="Disaster Relief">Disaster Relief & Rehabilitation</option>
+                                <option value="General Welfare">General Public Welfare</option>
+                                <option value="Other">Other Category (Custom Specify)</option>
+                            </select>
+                            <div id="category-other-wrapper" style="display: none; margin-top: 0.5rem;">
+                                <input type="text" id="form-scheme-category-other" placeholder="Specify custom welfare category name...">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-grid-3">
+                        <div class="form-group-admin">
+                            <label for="form-scheme-ministry">Ministry / Department</label>
+                            <input type="text" id="form-scheme-ministry" placeholder="e.g. Ministry of New and Renewable Energy">
+                        </div>
+                        <div class="form-group-admin">
+                            <label for="form-scheme-mode">Application Mode *</label>
+                            <select id="form-scheme-mode" required>
+                                <option value="Both">Both (Online Web Portal & Offline Physical Centers)</option>
+                                <option value="Online">Online Only (National / State Web Portal & App)</option>
+                                <option value="Offline">Offline Only (Physical Form & Office Submission)</option>
+                                <option value="CSC Center">CSC / Digital Seva Kendra</option>
+                                <option value="Bank Branch">Direct Bank Branch / Financial Institution</option>
+                                <option value="Gram Panchayat / Municipal Office">Gram Panchayat / Municipal Office</option>
+                                <option value="Post Office">India Post Office / Speed Post</option>
+                                <option value="Mobile App">Mobile App (UMANG / State App)</option>
+                                <option value="Other">Other Application Mode</option>
+                            </select>
+                        </div>
+                        <div class="form-group-admin">
+                            <label for="form-scheme-deadline">Application Period / Deadline</label>
+                            <input type="text" id="form-scheme-deadline" placeholder="e.g. Open Enrollment / FY 2026-27">
+                        </div>
+                    </div>
+
+                    <div class="form-group-admin">
+                        <label for="form-scheme-link">Official Portal URL *</label>
+                        <input type="url" id="form-scheme-link" placeholder="https://pmsuryaghar.gov.in/" required>
+                    </div>
+
+                    <!-- Section 2: Provisions & Guidelines -->
+                    <div style="font-size: 0.82rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--admin-accent); margin: 1.5rem 0 0.75rem 0;">
+                        2. Key Benefits, Overview & Application Procedure
+                    </div>
+
+                    <div class="form-group-admin">
+                        <label for="form-scheme-desc">Short Scheme Overview / Summary *</label>
+                        <textarea id="form-scheme-desc" rows="2" placeholder="Brief summary of what this welfare scheme provides to eligible beneficiaries..." required></textarea>
+                    </div>
+
+                    <div class="form-group-admin">
+                        <label for="form-scheme-benefits">Key Benefits & Financial Assistance (One per line or semicolon-separated) *</label>
+                        <textarea id="form-scheme-benefits" rows="3" placeholder="₹78,000 direct bank subsidy for 3kW rooftop solar&#10;Up to 300 units of free electricity every month&#10;Concessional loan interest rate of 7%" required></textarea>
+                    </div>
+
+                    <div class="form-grid-2">
+                        <div class="form-group-admin">
+                            <label for="form-scheme-steps">Application Steps (One per line)</label>
+                            <textarea id="form-scheme-steps" rows="3" placeholder="Register on national portal with electricity consumer number&#10;Submit vendor installation quotation&#10;Subsidy directly transferred post net-meter installation"></textarea>
+                        </div>
+                        <div class="form-group-admin">
+                            <label for="form-scheme-docs">Required Documents (Comma-separated)</label>
+                            <textarea id="form-scheme-docs" rows="3" placeholder="Aadhaar Card, Recent Electricity Bill, Bank Passbook / Cancelled Cheque, House Ownership Proof"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Section 3: Demographic Eligibility Criteria -->
+                    <div style="font-size: 0.82rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--admin-accent); margin: 1.5rem 0 0.75rem 0;">
+                        3. Demographic Eligibility Matching Criteria
+                    </div>
+
+                    <div class="form-group-admin">
+                        <label>Target Occupations (Select all that apply) *</label>
+                        <div style="display: flex; gap: 0.65rem; flex-wrap: wrap; margin-top: 0.4rem;" id="occupation-checkboxes">
+                            <label style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 600; color: #38bdf8; background: rgba(0, 180, 216, 0.1); padding: 4px 10px; border-radius: 8px; border: 1px solid rgba(0,180,216,0.3);">
+                                <input type="checkbox" name="form-occ" value="All" checked> All Occupations
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 500; color: #e2e8f0;">
+                                <input type="checkbox" name="form-occ" value="Farmer"> Farmer / Agriculture
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 500; color: #e2e8f0;">
+                                <input type="checkbox" name="form-occ" value="Student"> Student / Scholar
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 500; color: #e2e8f0;">
+                                <input type="checkbox" name="form-occ" value="Entrepreneur"> Entrepreneur / MSME
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 500; color: #e2e8f0;">
+                                <input type="checkbox" name="form-occ" value="Street Vendor"> Street Vendor / Food Stall
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 500; color: #e2e8f0;">
+                                <input type="checkbox" name="form-occ" value="Artisan"> Artisan / Weaver
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 500; color: #e2e8f0;">
+                                <input type="checkbox" name="form-occ" value="Daily Wager"> Daily Wager / Laborer
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 500; color: #e2e8f0;">
+                                <input type="checkbox" name="form-occ" value="Employed"> Employed / Salaried
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 500; color: #e2e8f0;">
+                                <input type="checkbox" name="form-occ" value="Self-Employed"> Self-Employed / Freelancer
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 500; color: #e2e8f0;">
+                                <input type="checkbox" name="form-occ" value="Unemployed"> Unemployed / Job Seeker
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 500; color: #e2e8f0;">
+                                <input type="checkbox" name="form-occ" value="Homemaker"> Homemaker
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 500; color: #e2e8f0;">
+                                <input type="checkbox" name="form-occ" value="Healthcare Worker"> Healthcare / ASHA Worker
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 500; color: #e2e8f0;">
+                                <input type="checkbox" name="form-occ" value="Sanitation Worker"> Sanitation / Safai Karamchari
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 500; color: #e2e8f0;">
+                                <input type="checkbox" name="form-occ" value="Senior Citizen"> Senior Citizen / Pensioner
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 500; color: #e2e8f0;">
+                                <input type="checkbox" name="form-occ" value="Ex-Serviceman"> Ex-Serviceman / Defense
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; font-weight: 600; color: var(--admin-warning); background: rgba(245,158,11,0.1); padding: 4px 10px; border-radius: 8px; border: 1px solid rgba(245,158,11,0.3);">
+                                <input type="checkbox" name="form-occ" value="Other" id="occ-checkbox-other"> Other (Custom Merchant / Role)
+                            </label>
+                        </div>
+
+                        <!-- Custom Occupation input with quick merchant tags -->
+                        <div id="occupation-other-wrapper" style="margin-top: 0.75rem; background: rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 0.85rem;">
+                            <label for="form-scheme-occ-other" style="font-size: 0.78rem; color: #a0aec0; margin-bottom: 0.4rem;">
+                                🏷️ Custom Occupation / Merchant Descriptor (Used by NLP matching engine):
+                            </label>
+                            <input type="text" id="form-scheme-occ-other" placeholder="e.g. Food stall owner, Small scale merchant, Delivery partner, Electrician, Tailor, Auto driver...">
+                            <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.5rem; align-items: center;" id="quick-occ-tags">
+                                <span style="font-size: 0.72rem; color: #718096;">Quick Insert:</span>
+                                <button type="button" class="quick-occ-pill" data-val="Food stall owner">+ Food Stall Owner</button>
+                                <button type="button" class="quick-occ-pill" data-val="Small scale merchant">+ Small Scale Merchant</button>
+                                <button type="button" class="quick-occ-pill" data-val="Delivery partner">+ Delivery Partner</button>
+                                <button type="button" class="quick-occ-pill" data-val="Auto / Cab Driver">+ Auto / Cab Driver</button>
+                                <button type="button" class="quick-occ-pill" data-val="Electrician / Plumber">+ Electrician / Plumber</button>
+                                <button type="button" class="quick-occ-pill" data-val="Tailor / Boutique">+ Tailor / Boutique</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-grid-3">
+                        <div class="form-group-admin">
+                            <label for="form-scheme-min-age">Min Age (0 - 125)</label>
+                            <input type="number" id="form-scheme-min-age" min="0" max="125" value="0">
+                        </div>
+                        <div class="form-group-admin">
+                            <label for="form-scheme-max-age">Max Age (0 - 125)</label>
+                            <input type="number" id="form-scheme-max-age" min="0" max="125" value="125">
+                        </div>
+                        <div class="form-group-admin">
+                            <label for="form-scheme-gender">Gender</label>
+                            <select id="form-scheme-gender">
+                                <option value="Any">Any Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-grid-3">
+                        <div class="form-group-admin">
+                            <label for="form-scheme-income">Max Annual Income Ceiling (₹)</label>
+                            <input type="number" id="form-scheme-income" placeholder="Leave blank for No Limit">
+                        </div>
+                        <div class="form-group-admin">
+                            <label for="form-scheme-location">Jurisdiction / State</label>
+                            <select id="form-scheme-location">
+                                <option value="Central">Central (Pan-India)</option>
+                                <option value="Gujarat">Gujarat</option>
+                                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                <option value="Maharashtra">Maharashtra</option>
+                                <option value="Karnataka">Karnataka</option>
+                                <option value="Tamil Nadu">Tamil Nadu</option>
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                <option value="Bihar">Bihar</option>
+                                <option value="West Bengal">West Bengal</option>
+                                <option value="Delhi">Delhi</option>
+                            </select>
+                        </div>
+                        <div class="form-group-admin">
+                            <label for="form-scheme-disability">Disability Filter</label>
+                            <select id="form-scheme-disability">
+                                <option value="false">Any Citizen / Not Required</option>
+                                <option value="true">Divyangjan / Disabled Only</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Section 4: Institutional Gazette Bulletin Dispatch -->
+                    <div class="gazette-callout-box">
+                        <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.5rem;">
+                            <span style="font-size: 1.3rem;">📢</span>
+                            <strong style="color: var(--admin-accent); font-size: 0.92rem;">
+                                Official Gazette Dispatch Protocol (Citizen Notification Sector)
+                            </strong>
+                        </div>
+                        <p style="font-size: 0.8rem; color: #cbd5e0; margin: 0 0 1rem 0; line-height: 1.5;">
+                            When saved, this bulletin will automatically reflect in the citizen's profile notification sector with the exact timestamp and a real-time toast alert. Per official government communications standards, this is published institutionally under the respective Ministry and <strong>will NOT state that an admin made the change</strong>.
+                        </p>
+
+                        <div class="form-grid-2">
+                            <div class="form-group-admin">
+                                <label for="form-bulletin-title">Official Notice Heading</label>
+                                <input type="text" id="form-bulletin-title" placeholder="e.g. 📢 Official Scheme Revision: PM Surya Ghar">
+                            </div>
+                            <div class="form-group-admin">
+                                <label for="form-bulletin-type">Notice Classification</label>
+                                <select id="form-bulletin-type">
+                                    <option value="benefit_update">💰 Benefit & Provision Revision</option>
+                                    <option value="announcement">📢 Policy Announcement / New Launch</option>
+                                    <option value="portal_live">🌐 Official Portal Operational Notice</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group-admin" style="margin-bottom: 0;">
+                            <label for="form-bulletin-body">Official Gazette Provisions & Revision Details</label>
+                            <textarea id="form-bulletin-body" rows="3" placeholder="e.g. Revised guidelines issued for FY 2026-27: Subsidies have been enhanced to ₹78,000 for residential installations and technical approvals streamlined on the national portal."></textarea>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="admin-modal-footer">
+                    <button type="button" id="cancel-scheme-modal-btn" class="action-btn-sm btn-export" style="padding: 10px 18px;">
+                        Cancel
+                    </button>
+                    <button type="submit" id="save-scheme-submit-btn" class="action-btn-sm btn-primary" style="padding: 10px 24px;">
+                        💾 Save & Dispatch Official Gazette
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Feedback Container -->
+    <div id="admin-toast-container"></div>
+
+</body>
+</html>

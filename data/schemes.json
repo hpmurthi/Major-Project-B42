@@ -1,0 +1,2649 @@
+[
+  {
+    "id": "test-scheme",
+    "name": "Test Scheme",
+    "category": "Employment",
+    "ministry": "Ministry of Education",
+    "description": "Will get Loan 100000 rupees",
+    "benefits": [
+      "mmmmmmmm"
+    ],
+    "eligibility": {
+      "minAge": 0,
+      "maxAge": 10,
+      "location": "Central",
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Employed",
+        "Teacher"
+      ],
+      "maxIncome": 200000,
+      "disabledOnly": false
+    },
+    "applicationSteps": [
+      "apply"
+    ],
+    "officialLink": "https://www.aicte.gov.in/schemes/students-development-schemes",
+    "applicationMode": "Both",
+    "requiredDocuments": [
+      "apply"
+    ],
+    "deadline": "30-10-2026",
+    "lastUpdated": "16 Oct 2026"
+  },
+  {
+    "id": "pradhan-mantri-surya-ghar-muft-bijli-yojana",
+    "name": "Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+    "category": "Energy & Infrastructure",
+    "ministry": "Ministry of New and Renewable Energy",
+    "description": "National solar rooftop subsidy scheme providing up to 300 units of free electricity every month for residential households.",
+    "benefits": [
+      "Up to 300 units of free electricity per month",
+      "Enhanced subsidy of ₹85,000 directly transferred to beneficiary bank account",
+      "Subsidized loan interest rate capped at 6.5%"
+    ],
+    "eligibility": {
+      "minAge": 18,
+      "maxAge": 125,
+      "location": "Central",
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "All"
+      ],
+      "maxIncome": 1000000,
+      "disabledOnly": false
+    },
+    "applicationSteps": [
+      "Register on the National Portal with electricity consumer number and DISCOM name",
+      "Submit rooftop solar installation application online",
+      "Post installation and net-meter inspection, subsidy is released directly to bank account via DBT within 30 days"
+    ],
+    "officialLink": "https://pmsuryaghar.gov.in/",
+    "applicationMode": "Online",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Recent Electricity Bill",
+      "Bank Account Passbook / Cancelled Cheque",
+      "Proof of House / Roof Ownership"
+    ],
+    "deadline": "Active for FY 2026-27",
+    "lastUpdated": "16 Oct 2026"
+  },
+  {
+    "id": "pm-kisan",
+    "name": "Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)",
+    "category": "Agriculture",
+    "description": "Financial support of ₹6,000 per year for all landholding farmers.",
+    "benefits": [
+      "₹6,000 per year in 3 equal installments",
+      "Direct Benefit Transfer to bank account"
+    ],
+    "eligibility": {
+      "minAge": 18,
+      "location": "Central",
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Farmer",
+        "Daily Wager"
+      ],
+      "disabledOnly": false,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Register on PM-Kisan portal",
+      "Submit Aadhaar and land records",
+      "Verify via CSC"
+    ],
+    "officialLink": "https://pmkisan.gov.in/",
+    "applicationMode": "Both",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate",
+      "Land Ownership Records (RTC)",
+      "Active Bank Account Details / Passbook"
+    ]
+  },
+  {
+    "id": "pmfby",
+    "name": "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
+    "category": "Agriculture",
+    "description": "Crop insurance scheme integrating multiple stakeholders on a single IT platform.",
+    "benefits": [
+      "Insurance cover against crop failure",
+      "Low premium rates for farmers"
+    ],
+    "eligibility": {
+      "location": "Central",
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Farmer",
+        "Daily Wager"
+      ],
+      "disabledOnly": false,
+      "minAge": 18,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Register on PMFBY portal",
+      "Provide crop sowing certificate",
+      "Pay premium"
+    ],
+    "officialLink": "https://pmfby.gov.in/",
+    "applicationMode": "Online",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate",
+      "Land Ownership Records (RTC)"
+    ]
+  },
+  {
+    "id": "kcc",
+    "name": "Kisan Credit Card (KCC)",
+    "category": "Agriculture",
+    "description": "Credit support to the agricultural sector for cultivation and other needs.",
+    "benefits": [
+      "Short term credit limit",
+      "Low interest rates",
+      "ATM-enabled debit card"
+    ],
+    "eligibility": {
+      "location": "Central",
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Farmer",
+        "Daily Wager"
+      ],
+      "disabledOnly": false,
+      "minAge": 18,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Visit nearest bank branch",
+      "Fill KCC application",
+      "Submit land documents"
+    ],
+    "officialLink": "https://www.myscheme.gov.in/schemes/kcc",
+    "applicationMode": "Offline",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate",
+      "Land Ownership Records (RTC)"
+    ]
+  },
+  {
+    "id": "rythu-bandhu",
+    "name": "Rythu Bandhu Scheme",
+    "category": "Agriculture",
+    "description": "Agriculture investment support scheme provided by the Telangana Government.",
+    "benefits": [
+      "₹5,000 per acre per season for seeds and fertilizers"
+    ],
+    "eligibility": {
+      "location": "Telangana",
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Farmer",
+        "Daily Wager"
+      ],
+      "disabledOnly": false,
+      "minAge": 18,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Apply via Gram Panchayat",
+      "Submit patta passbook details"
+    ],
+    "officialLink": "http://rythubandhu.telangana.gov.in/",
+    "applicationMode": "Offline",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate",
+      "Land Ownership Records (RTC)",
+      "Active Bank Account Details / Passbook"
+    ]
+  },
+  {
+    "id": "nsp-post-matric",
+    "name": "National Scholarship - Post-Matric",
+    "category": "Education",
+    "description": "Scholarship for minority and backward class students pursuing higher education.",
+    "benefits": [
+      "Admission & tuition fee reimbursement",
+      "Monthly maintenance allowance"
+    ],
+    "eligibility": {
+      "minAge": 0,
+      "maxIncome": 250000,
+      "location": "Central",
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "SC",
+        "ST",
+        "OBC"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student"
+      ],
+      "disabledOnly": false,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Register on NSP Portal",
+      "Verify documents with Institute",
+      "Final submission"
+    ],
+    "officialLink": "https://scholarships.gov.in/",
+    "applicationMode": "Online",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Income Certificate",
+      "Category / Caste Certificate",
+      "Previous Year Marksheet",
+      "Institution Admission Proof"
+    ]
+  },
+  {
+    "id": "maha-education",
+    "name": "MahaDBT Education Subsidies",
+    "category": "Education",
+    "description": "Various scholarship schemes for students in Maharashtra.",
+    "benefits": [
+      "Tuition fee waiver",
+      "Hostel accommodation allowances",
+      "Exam fee reimbursement"
+    ],
+    "eligibility": {
+      "location": "Maharashtra",
+      "maxIncome": 800000,
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student"
+      ],
+      "disabledOnly": false,
+      "minAge": 0,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Apply via MahaDBT portal",
+      "Link Aadhaar with Bank Account"
+    ],
+    "officialLink": "https://mahadbt.gov.in/",
+    "applicationMode": "Both",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Income Certificate",
+      "Category / Caste Certificate",
+      "Previous Year Marksheet",
+      "Institution Admission Proof"
+    ]
+  },
+  {
+    "id": "up-scholarship",
+    "name": "UP Pre and Post Matric Scholarship",
+    "category": "Education",
+    "description": "Fee reimbursement and scholarship for UP state students.",
+    "benefits": [
+      "Fee reimbursement directly to institute/student account"
+    ],
+    "eligibility": {
+      "location": "Uttar Pradesh",
+      "maxIncome": 250000,
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student"
+      ],
+      "disabledOnly": false,
+      "minAge": 0,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Apply via Saksham UP portal",
+      "Aadhaar authentication"
+    ],
+    "officialLink": "https://scholarship.up.gov.in/",
+    "applicationMode": "Online",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Income Certificate",
+      "Category / Caste Certificate",
+      "Previous Year Marksheet",
+      "Institution Admission Proof"
+    ]
+  },
+  {
+    "id": "pragati-scholarship",
+    "name": "AICTE Pragati Scholarship for Girls",
+    "category": "Education",
+    "description": "Empowerment of girls through technical education.",
+    "benefits": [
+      "₹50,000 per annum for every year of study"
+    ],
+    "eligibility": {
+      "maxIncome": 800000,
+      "location": "Central",
+      "gender": [
+        "Female"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student"
+      ],
+      "disabledOnly": false,
+      "minAge": 18,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Apply via National Scholarship Portal",
+      "Submit institution Bonafide"
+    ],
+    "officialLink": "https://www.aicte-india.org/schemes/students-development-schemes",
+    "applicationMode": "Online",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Income Certificate",
+      "Category / Caste Certificate",
+      "Previous Year Marksheet",
+      "Institution Admission Proof",
+      "Active Bank Account Details / Passbook"
+    ]
+  },
+  {
+    "id": "pm-jay",
+    "name": "Ayushman Bharat (PM-JAY)",
+    "category": "Health",
+    "description": "The world's largest health insurance/assurance scheme fully financed by the government.",
+    "benefits": [
+      "Health cover of ₹5 Lakh per family per year",
+      "Cashless treatment at public and private hospitals"
+    ],
+    "eligibility": {
+      "maxIncome": 200000,
+      "location": "Central",
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student",
+        "Farmer",
+        "Entrepreneur",
+        "None"
+      ],
+      "disabledOnly": false,
+      "minAge": 18,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Check eligibility on PM-JAY website",
+      "Generate Ayushman Card via app/kiosk"
+    ],
+    "officialLink": "https://pmjay.gov.in/",
+    "applicationMode": "Both",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Income Certificate",
+      "Category / Caste Certificate",
+      "Active Bank Account Details / Passbook"
+    ]
+  },
+  {
+    "id": "pm-jan-aushadhi",
+    "name": "Pradhan Mantri Bhartiya Janaushadhi Pariyojana",
+    "category": "Health",
+    "description": "Providing quality generic medicines at affordable prices to all.",
+    "benefits": [
+      "Medicines cheaper by 50-90%",
+      "Accessibility via Jan Aushadhi Kendras"
+    ],
+    "eligibility": {
+      "location": "Central",
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student",
+        "Farmer",
+        "Entrepreneur",
+        "None"
+      ],
+      "disabledOnly": false,
+      "minAge": 18,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Locate nearest Kendra via app",
+      "Purchase over the counter"
+    ],
+    "officialLink": "http://janaushadhi.gov.in/",
+    "applicationMode": "Online",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate"
+    ]
+  },
+  {
+    "id": "pm-jdy",
+    "name": "Pradhan Mantri Jan Dhan Yojana (PMJDY)",
+    "category": "Finance",
+    "description": "National Mission for Financial Inclusion to ensure access to financial services.",
+    "benefits": [
+      "Zero balance savings account",
+      "RuPay Debit card",
+      "Accident insurance cover of ₹2 lakh"
+    ],
+    "eligibility": {
+      "minAge": 18,
+      "location": "Central",
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student",
+        "Farmer",
+        "Entrepreneur",
+        "None"
+      ],
+      "disabledOnly": false,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Visit nearest bank",
+      "Submit KYC documents"
+    ],
+    "officialLink": "https://pmjdy.gov.in/",
+    "applicationMode": "Offline",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate",
+      "Active Bank Account Details / Passbook"
+    ]
+  },
+  {
+    "id": "pm-jjby",
+    "name": "Pradhan Mantri Jeevan Jyoti Bima Yojana",
+    "category": "Finance",
+    "description": "Life insurance scheme renewable from year to year.",
+    "benefits": [
+      "₹2 lakh life cover on death due to any reason",
+      "Low premium of ₹436/year"
+    ],
+    "eligibility": {
+      "minAge": 18,
+      "location": "Central",
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student",
+        "Farmer",
+        "Entrepreneur",
+        "None"
+      ],
+      "disabledOnly": false,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Auto-debit from Jan Dhan account",
+      "Submit form at bank"
+    ],
+    "officialLink": "https://financialservices.gov.in/beta/en/pmjjby",
+    "applicationMode": "Offline",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate",
+      "Active Bank Account Details / Passbook"
+    ]
+  },
+  {
+    "id": "atal-pension",
+    "name": "Atal Pension Yojana (APY)",
+    "category": "Finance",
+    "description": "A pension scheme primarily focused on the unorganized sector workers.",
+    "benefits": [
+      "Guaranteed pension of ₹1,000 to ₹5,000 per month after age 60"
+    ],
+    "eligibility": {
+      "minAge": 18,
+      "location": "Central",
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student",
+        "Farmer",
+        "Entrepreneur",
+        "None"
+      ],
+      "disabledOnly": false,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Open bank account",
+      "Fill APY registration form",
+      "Maintain balance for auto-debit"
+    ],
+    "officialLink": "https://npscra.nsdl.co.in/scheme-details.php",
+    "applicationMode": "Offline",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate",
+      "Active Bank Account Details / Passbook"
+    ]
+  },
+  {
+    "id": "pm-svanidhi",
+    "name": "PM SVANidhi",
+    "category": "Entrepreneurship",
+    "description": "Micro-credit facility scheme providing affordable loans to street vendors.",
+    "benefits": [
+      "Working capital loan up to ₹10,000",
+      "Interest subsidy on regular repayment"
+    ],
+    "eligibility": {
+      "location": "Central",
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Street Vendor",
+        "Entrepreneur"
+      ],
+      "disabledOnly": false,
+      "minAge": 18,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Apply online or at nearest bank",
+      "Submit Urban Local Body recommendation"
+    ],
+    "officialLink": "https://pmsvanidhi.mohua.gov.in/",
+    "applicationMode": "Both",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate",
+      "Active Bank Account Details / Passbook"
+    ]
+  },
+  {
+    "id": "mudra-loan",
+    "name": "Pradhan Mantri Mudra Yojana (PMMY)",
+    "category": "Entrepreneurship",
+    "description": "Loans up to ₹10 lakh for non-corporate, non-farm small/micro enterprises.",
+    "benefits": [
+      "Collateral-free loans",
+      "Three categories: Shishu, Kishore, Tarun"
+    ],
+    "eligibility": {
+      "location": "Central",
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Entrepreneur"
+      ],
+      "disabledOnly": false,
+      "minAge": 18,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Present business plan to lending institution",
+      "Apply via Udyamimitra portal"
+    ],
+    "officialLink": "https://www.mudra.org.in/",
+    "applicationMode": "Online",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate",
+      "Active Bank Account Details / Passbook"
+    ]
+  },
+  {
+    "id": "standup-india",
+    "name": "Stand Up India",
+    "category": "Entrepreneurship",
+    "description": "Bank loans between ₹10 lakh and ₹1 crore to SC/ST or women borrowers.",
+    "benefits": [
+      "Funding for greenfield enterprises in manufacturing, services or trading"
+    ],
+    "eligibility": {
+      "minAge": 18,
+      "location": "Central",
+      "gender": [
+        "Female"
+      ],
+      "caste": [
+        "SC",
+        "ST",
+        "OBC"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Entrepreneur"
+      ],
+      "disabledOnly": false,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Apply via Stand Up India portal",
+      "Submit project report to bank"
+    ],
+    "officialLink": "https://www.standupmitra.in/",
+    "applicationMode": "Both",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate",
+      "Active Bank Account Details / Passbook"
+    ]
+  },
+  {
+    "id": "startup-india",
+    "name": "Startup India Seed Fund Scheme",
+    "category": "Entrepreneurship",
+    "description": "Financial assistance to startups for proof of concept, prototype development, product trials, market entry, and commercialization.",
+    "benefits": [
+      "Funding assistance through incubators",
+      "Tax exemptions for DPIIT recognized startups"
+    ],
+    "eligibility": {
+      "location": "Central",
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Entrepreneur"
+      ],
+      "disabledOnly": false,
+      "minAge": 18,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "DPIIT registration",
+      "Apply through Startup India portal to incubators"
+    ],
+    "officialLink": "https://seedfund.startupindia.gov.in/",
+    "applicationMode": "Online",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate",
+      "Active Bank Account Details / Passbook"
+    ]
+  },
+  {
+    "id": "sukanya-samriddhi",
+    "name": "Sukanya Samriddhi Yojana",
+    "category": "Social Welfare",
+    "description": "Small deposit scheme for the girl child under 'Beti Bachao Beti Padhao' campaign.",
+    "benefits": [
+      "Highest interest rate among savings schemes",
+      "Tax deduction under Section 80C"
+    ],
+    "eligibility": {
+      "location": "Central",
+      "gender": [
+        "Female"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student",
+        "Farmer",
+        "Entrepreneur",
+        "None"
+      ],
+      "disabledOnly": false,
+      "minAge": 0,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Open account in Post Office or authorized bank",
+      "Submit child's birth certificate"
+    ],
+    "officialLink": "https://www.indiapost.gov.in/",
+    "applicationMode": "Offline",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate"
+    ]
+  },
+  {
+    "id": "pm-ujjwala",
+    "name": "Pradhan Mantri Ujjwala Yojana (PMUY)",
+    "category": "Social Welfare",
+    "description": "Providing clean cooking fuel (LPG) to women of BPL households.",
+    "benefits": [
+      "Deposit-free LPG connection",
+      "First refill and hotplate provided free of cost"
+    ],
+    "eligibility": {
+      "maxIncome": 150000,
+      "location": "Central",
+      "gender": [
+        "Female"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student",
+        "Farmer",
+        "Entrepreneur",
+        "None"
+      ],
+      "disabledOnly": false,
+      "minAge": 18,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Apply at nearest LPG distributor",
+      "Submit BPL Ration Card and Aadhaar"
+    ],
+    "officialLink": "https://www.pmuy.gov.in/",
+    "applicationMode": "Offline",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Income Certificate",
+      "Category / Caste Certificate"
+    ]
+  },
+  {
+    "id": "pmmvy",
+    "name": "Pradhan Mantri Matru Vandana Yojana",
+    "category": "Social Welfare",
+    "description": "Maternity benefit programme implemented in all the districts of the country.",
+    "benefits": [
+      "Cash incentive of ₹5,000 for pregnant women to support nutritional needs"
+    ],
+    "eligibility": {
+      "location": "Central",
+      "gender": [
+        "Female"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student",
+        "Farmer",
+        "Entrepreneur",
+        "None"
+      ],
+      "disabledOnly": false,
+      "minAge": 18,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Register at Anganwadi Centre",
+      "Submit Mother and Child Protection (MCP) Card"
+    ],
+    "officialLink": "https://wcd.nic.in/schemes/pradhan-mantri-matru-vandana-yojana",
+    "applicationMode": "Offline",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate",
+      "Active Bank Account Details / Passbook"
+    ]
+  },
+  {
+    "id": "pm-awas-yojana-urban",
+    "name": "Pradhan Mantri Awas Yojana (PMAY-U)",
+    "category": "Housing",
+    "description": "Housing for All initiative targeting the urban poor.",
+    "benefits": [
+      "Credit Linked Subsidy Scheme (CLSS) up to ₹2.67 lakh",
+      "Affordable housing in partnership"
+    ],
+    "eligibility": {
+      "maxIncome": 1800000,
+      "location": "Central",
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Urban"
+      ],
+      "occupation": [
+        "Student",
+        "Farmer",
+        "Entrepreneur",
+        "None"
+      ],
+      "disabledOnly": false,
+      "minAge": 18,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Apply via PM-Awas portal or CSC",
+      "Aadhaar integration"
+    ],
+    "officialLink": "https://pmay-urban.gov.in/",
+    "applicationMode": "Both",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Income Certificate",
+      "Category / Caste Certificate",
+      "Active Bank Account Details / Passbook"
+    ]
+  },
+  {
+    "id": "pm-awas-yojana-gramin",
+    "name": "Pradhan Mantri Awas Yojana (PMAY-G)",
+    "category": "Housing",
+    "description": "Housing scheme for the rural poor.",
+    "benefits": [
+      "Financial assistance of ₹1.2 lakh for house construction in plains",
+      "Includes toilet construction funds"
+    ],
+    "eligibility": {
+      "maxIncome": 100000,
+      "location": "Central",
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural"
+      ],
+      "occupation": [
+        "Student",
+        "Farmer",
+        "Entrepreneur",
+        "None"
+      ],
+      "disabledOnly": false,
+      "minAge": 18,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Identified via SECC 2011 data",
+      "Verification by Gram Sabha"
+    ],
+    "officialLink": "https://pmayg.nic.in/",
+    "applicationMode": "Offline",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Income Certificate",
+      "Category / Caste Certificate",
+      "Active Bank Account Details / Passbook"
+    ]
+  },
+  {
+    "id": "mgnrega",
+    "name": "MGNREGA",
+    "category": "Employment",
+    "description": "Mahatma Gandhi National Rural Employment Guarantee Act.",
+    "benefits": [
+      "Guarantees 100 days of wage employment in a financial year to a rural household"
+    ],
+    "eligibility": {
+      "minAge": 18,
+      "location": "Central",
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural"
+      ],
+      "occupation": [
+        "Student",
+        "Farmer",
+        "Entrepreneur",
+        "None"
+      ],
+      "disabledOnly": false,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Apply at local Gram Panchayat",
+      "Get Job Card issued within 15 days"
+    ],
+    "officialLink": "https://nrega.nic.in/",
+    "applicationMode": "Offline",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate"
+    ]
+  },
+  {
+    "id": "pmkvy",
+    "name": "Pradhan Mantri Kaushal Vikas Yojana (PMKVY)",
+    "category": "Skill Development",
+    "description": "Flagship scheme of the Ministry of Skill Development & Entrepreneurship.",
+    "benefits": [
+      "Free industry-relevant skill training",
+      "Certification and placement assistance"
+    ],
+    "eligibility": {
+      "minAge": 18,
+      "location": "Central",
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Entrepreneur"
+      ],
+      "disabledOnly": false,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Register via Skill India Portal",
+      "Enroll in nearest PMKVY Training Centre"
+    ],
+    "officialLink": "https://www.pmkvyofficial.org/",
+    "applicationMode": "Online",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate"
+    ]
+  },
+  {
+    "id": "karnataka-gruha-lakshmi",
+    "name": "Gruha Lakshmi Scheme (Karnataka)",
+    "category": "Women Empowerment",
+    "description": "Financial assistance to the woman head of a household.",
+    "benefits": [
+      "₹2,000 per month transferred directly to bank account"
+    ],
+    "eligibility": {
+      "location": "Karnataka",
+      "gender": [
+        "Female"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student",
+        "Farmer",
+        "Entrepreneur",
+        "None"
+      ],
+      "disabledOnly": false,
+      "minAge": 18,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Apply via Seva Sindhu portal or Bangalore One centres",
+      "Provide Ration Card details"
+    ],
+    "officialLink": "https://sevasindhu.karnataka.gov.in/",
+    "applicationMode": "Online",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate",
+      "Active Bank Account Details / Passbook"
+    ]
+  },
+  {
+    "id": "karnataka-anna-bhagya",
+    "name": "Anna Bhagya Scheme",
+    "category": "Food Security",
+    "description": "Free rice provided to BPL and Antyodaya card holders in Karnataka.",
+    "benefits": [
+      "10 kgs of free food grains per month per person"
+    ],
+    "eligibility": {
+      "location": "Karnataka",
+      "maxIncome": 120000,
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student",
+        "Farmer",
+        "Entrepreneur",
+        "None"
+      ],
+      "disabledOnly": false,
+      "minAge": 18,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Holders of valid BPL cards automatically receive it at Fair Price Shops"
+    ],
+    "officialLink": "https://ahara.kar.nic.in/",
+    "applicationMode": "Offline",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Income Certificate",
+      "Category / Caste Certificate"
+    ]
+  },
+  {
+    "id": "delhi-free-electricity",
+    "name": "Mukhyamantri Muft Bijli Yojana (Delhi)",
+    "category": "Utility Subsidy",
+    "description": "Provision of subsidized electricity to domestic consumers.",
+    "benefits": [
+      "100% subsidy for usage up to 200 units",
+      "50% subsidy for 201-400 units"
+    ],
+    "eligibility": {
+      "location": "Delhi",
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student",
+        "Farmer",
+        "Entrepreneur",
+        "None"
+      ],
+      "disabledOnly": false,
+      "minAge": 18,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Apply for subsidy opt-in online via DISCOM or WhatsApp"
+    ],
+    "officialLink": "https://delhi.gov.in/",
+    "applicationMode": "Online",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate"
+    ]
+  },
+  {
+    "id": "pm-kisan-v2",
+    "name": "Updated PM Kisan Samman Nidhi",
+    "category": "Agriculture",
+    "description": "Direct benefit transfer to farmers across India. [Scraped Data]",
+    "benefits": [
+      "₹6,000 yearly",
+      "Direct to Bank"
+    ],
+    "eligibility": {
+      "location": "Central",
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Farmer",
+        "Daily Wager"
+      ],
+      "disabledOnly": false,
+      "minAge": 18,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Visit CSC",
+      "Authenticate Aadhaar"
+    ],
+    "officialLink": "https://pmkisan.gov.in",
+    "applicationMode": "Offline",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate",
+      "Land Ownership Records (RTC)",
+      "Active Bank Account Details / Passbook"
+    ]
+  },
+  {
+    "id": "ka-gruha-jyothi",
+    "name": "Gruha Jyothi Scheme (Karnataka)",
+    "category": "Utility Subsidy",
+    "description": "Provides free electricity up to 200 units for domestic households in Karnataka.",
+    "benefits": [
+      "Zero electricity bill for consumption below 200 units"
+    ],
+    "eligibility": {
+      "location": "Karnataka",
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student",
+        "Farmer",
+        "Entrepreneur",
+        "None"
+      ],
+      "disabledOnly": false,
+      "minAge": 18,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Apply online via Seva Sindhu portal",
+      "Link Aadhaar with BESCOM/ESCOM account"
+    ],
+    "officialLink": "https://sevasindhu.karnataka.gov.in/",
+    "applicationMode": "Online",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate"
+    ]
+  },
+  {
+    "id": "ka-shakti",
+    "name": "Shakti Scheme (Karnataka)",
+    "category": "Transport",
+    "description": "Free travel for women in non-premium state-run buses across Karnataka.",
+    "benefits": [
+      "Zero ticket fare for women travelling within the state"
+    ],
+    "eligibility": {
+      "location": "Karnataka",
+      "gender": [
+        "Female"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student",
+        "Farmer",
+        "Entrepreneur",
+        "None"
+      ],
+      "disabledOnly": false,
+      "minAge": 18,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Carry valid Karnataka ID proof (Aadhaar/Voter ID)",
+      "Apply for Shakti Smart Card"
+    ],
+    "officialLink": "https://sevasindhu.karnataka.gov.in/",
+    "applicationMode": "Offline",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate"
+    ]
+  },
+  {
+    "id": "ka-yuva-nidhi",
+    "name": "Yuva Nidhi Scheme (Karnataka)",
+    "category": "Employment",
+    "description": "Unemployment allowance for recent graduates and diploma holders for up to 2 years.",
+    "benefits": [
+      "₹3,000/month for degree holders",
+      "₹1,500/month for diploma holders"
+    ],
+    "eligibility": {
+      "location": "Karnataka",
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student",
+        "Farmer",
+        "Entrepreneur",
+        "None"
+      ],
+      "disabledOnly": false,
+      "minAge": 18,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Register on Seva Sindhu",
+      "Submit degree certificate and self-declaration"
+    ],
+    "officialLink": "https://sevasindhu.karnataka.gov.in/",
+    "applicationMode": "Offline",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate",
+      "Active Bank Account Details / Passbook"
+    ]
+  },
+  {
+    "id": "ka-raitha-vidya-nidhi",
+    "name": "Raitha Vidya Nidhi",
+    "category": "Education",
+    "description": "Scholarship program for the children of farmers to encourage higher education.",
+    "benefits": [
+      "Annual scholarship ranges from ₹2,000 to ₹11,000 based on course"
+    ],
+    "eligibility": {
+      "location": "Karnataka",
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student"
+      ],
+      "disabledOnly": false,
+      "minAge": 18,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Apply via State Scholarship Portal (SSP)",
+      "Provide farmer parent's ID proof"
+    ],
+    "officialLink": "https://ssp.postmatric.karnataka.gov.in/",
+    "applicationMode": "Online",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate",
+      "Land Ownership Records (RTC)",
+      "Previous Year Marksheet",
+      "Institution Admission Proof",
+      "Active Bank Account Details / Passbook"
+    ]
+  },
+  {
+    "id": "ka-sandhya-suraksha",
+    "name": "Sandhya Suraksha Yojana",
+    "category": "Social Security",
+    "description": "Old age pension scheme for senior citizens in the unorganized sector.",
+    "benefits": [
+      "Monthly pension of ₹1,200"
+    ],
+    "eligibility": {
+      "minAge": 60,
+      "location": "Karnataka",
+      "maxIncome": 20000,
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student",
+        "Farmer",
+        "Entrepreneur",
+        "None"
+      ],
+      "disabledOnly": false,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Apply at Nada Kacheri or Gram Panchayat",
+      "Submit age and income certificate"
+    ],
+    "officialLink": "https://nadakacheri.karnataka.gov.in/",
+    "applicationMode": "Offline",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Income Certificate",
+      "Category / Caste Certificate",
+      "Active Bank Account Details / Passbook"
+    ]
+  },
+  {
+    "id": "ka-mathrushree",
+    "name": "Mathrushree Scheme",
+    "category": "Health & Welfare",
+    "description": "Financial assistance for pregnant women falling under the BPL category.",
+    "benefits": [
+      "₹6,000 financial aid transferred in two installments"
+    ],
+    "eligibility": {
+      "location": "Karnataka",
+      "gender": [
+        "Female"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student",
+        "Farmer",
+        "Entrepreneur",
+        "None"
+      ],
+      "disabledOnly": false,
+      "minAge": 18,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Register with local Anganwadi/ASHA worker",
+      "Present BPL card"
+    ],
+    "officialLink": "https://karnataka.gov.in/",
+    "applicationMode": "Offline",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate",
+      "Active Bank Account Details / Passbook"
+    ]
+  },
+  {
+    "id": "ka-vidyasiri",
+    "name": "Vidyasiri Scheme",
+    "category": "Education",
+    "description": "Food and accommodation allowance for backward class students studying post-matric courses.",
+    "benefits": [
+      "₹1,500 per month for 10 months to students not in government hostels"
+    ],
+    "eligibility": {
+      "location": "Karnataka",
+      "maxIncome": 250000,
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "SC",
+        "ST",
+        "OBC"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student"
+      ],
+      "disabledOnly": false,
+      "minAge": 0,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Apply via ePASS / SSP portal",
+      "Provide institution bonafide certificate"
+    ],
+    "officialLink": "https://karepass.cgg.gov.in/",
+    "applicationMode": "Online",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Income Certificate",
+      "Category / Caste Certificate",
+      "Previous Year Marksheet",
+      "Institution Admission Proof",
+      "Active Bank Account Details / Passbook"
+    ]
+  },
+  {
+    "id": "ka-bhagyalakshmi",
+    "name": "Bhagyalakshmi Scheme",
+    "category": "Social Welfare",
+    "description": "Aims to promote the birth of girl children in BPL families and raise their status within the family/society.",
+    "benefits": [
+      "Health insurance coverage",
+      "Lump sum amount on completing 18 years"
+    ],
+    "eligibility": {
+      "location": "Karnataka",
+      "gender": [
+        "Female"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student",
+        "Farmer",
+        "Entrepreneur",
+        "None"
+      ],
+      "disabledOnly": false,
+      "minAge": 0,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Apply within one year of birth of the girl child at anganwadi"
+    ],
+    "officialLink": "https://dwcd.kar.nic.in/",
+    "applicationMode": "Offline",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate"
+    ]
+  },
+  {
+    "id": "ka-yeshasvini",
+    "name": "Yeshasvini Health Insurance",
+    "category": "Health",
+    "description": "Cooperative farmers health care scheme.",
+    "benefits": [
+      "Cashless surgery up to specified limits in network hospitals"
+    ],
+    "eligibility": {
+      "location": "Karnataka",
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Farmer",
+        "Daily Wager"
+      ],
+      "disabledOnly": false,
+      "minAge": 18,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Become a member of a rural cooperative society",
+      "Pay minimal annual premium"
+    ],
+    "officialLink": "https://sahakara.kar.gov.in/",
+    "applicationMode": "Offline",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate",
+      "Land Ownership Records (RTC)"
+    ]
+  },
+  {
+    "id": "ka-cmegp",
+    "name": "Chief Minister's Employment Generation Programme (CMEGP)",
+    "category": "Entrepreneurship",
+    "description": "Promote establishing micro-enterprises in rural areas with subsidy.",
+    "benefits": [
+      "Subsidized loans up to ₹10 Lakhs for general category, higher for SC/ST/Women"
+    ],
+    "eligibility": {
+      "location": "Karnataka",
+      "minAge": 18,
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural"
+      ],
+      "occupation": [
+        "Entrepreneur"
+      ],
+      "disabledOnly": false,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Submit project report",
+      "Apply through KVIB"
+    ],
+    "officialLink": "https://kum.karnataka.gov.in/",
+    "applicationMode": "Offline",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate",
+      "Active Bank Account Details / Passbook"
+    ]
+  },
+  {
+    "id": "ka-manaswini",
+    "name": "Manaswini Scheme",
+    "category": "Social Security",
+    "description": "Pension for unmarried women, divorced, and separated women from BPL families.",
+    "benefits": [
+      "Monthly pension of ₹1,200"
+    ],
+    "eligibility": {
+      "location": "Karnataka",
+      "minAge": 18,
+      "gender": [
+        "Female"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student",
+        "Farmer",
+        "Entrepreneur",
+        "None"
+      ],
+      "disabledOnly": false,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Apply at Nada Kacheri",
+      "Provide age and marital status certificates"
+    ],
+    "officialLink": "https://nadakacheri.karnataka.gov.in/",
+    "applicationMode": "Offline",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate",
+      "Active Bank Account Details / Passbook"
+    ]
+  },
+  {
+    "id": "ka-ganga-kalyana",
+    "name": "Ganga Kalyana Scheme",
+    "category": "Agriculture",
+    "description": "Irrigation facilities for the agricultural land owned by SC/ST farmers.",
+    "benefits": [
+      "Free borewell drilling and pump sets installation"
+    ],
+    "eligibility": {
+      "location": "Karnataka",
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "SC",
+        "ST",
+        "OBC"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Farmer",
+        "Daily Wager"
+      ],
+      "disabledOnly": false,
+      "minAge": 18,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Apply at the district Ambedkar Development Corporation office"
+    ],
+    "officialLink": "https://adcl.karnataka.gov.in/",
+    "applicationMode": "Offline",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate",
+      "Land Ownership Records (RTC)"
+    ]
+  },
+  {
+    "id": "ka-mythri",
+    "name": "Mythri Scheme",
+    "category": "Social Security",
+    "description": "Pension for transgender individuals.",
+    "benefits": [
+      "Monthly pension of ₹1,200 to provide social security"
+    ],
+    "eligibility": {
+      "location": "Karnataka",
+      "minAge": 18,
+      "gender": [
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student",
+        "Farmer",
+        "Entrepreneur",
+        "None"
+      ],
+      "disabledOnly": false,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Apply at Nada Kacheri",
+      "Submit medical board certificate"
+    ],
+    "officialLink": "https://wcd.karnataka.gov.in/",
+    "applicationMode": "Offline",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate",
+      "Active Bank Account Details / Passbook"
+    ]
+  },
+  {
+    "id": "ka-kaushalya",
+    "name": "Kaushalya Karnataka",
+    "category": "Skill Development",
+    "description": "Skill development scheme offering short term vocation training courses.",
+    "benefits": [
+      "Free training",
+      "Placement assistance"
+    ],
+    "eligibility": {
+      "location": "Karnataka",
+      "minAge": 18,
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student",
+        "Farmer",
+        "Entrepreneur",
+        "None"
+      ],
+      "disabledOnly": false,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Register on Kaushalya Karnataka web portal"
+    ],
+    "officialLink": "https://www.kaushalkar.com/",
+    "applicationMode": "Online",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate"
+    ]
+  },
+  {
+    "id": "wb-kanyashree",
+    "name": "Kanyashree Prakalpa",
+    "category": "Women Empowerment",
+    "description": "Improves the life and status of the girls by helping them pursue higher studies.",
+    "benefits": [
+      "Annual scholarship of ₹1000",
+      "One-time grant of ₹25,000"
+    ],
+    "eligibility": {
+      "location": "West Bengal",
+      "gender": [
+        "Female"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student",
+        "Farmer",
+        "Entrepreneur",
+        "None"
+      ],
+      "disabledOnly": false,
+      "minAge": 18,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Apply through respective school/college",
+      "Submit birth and unmarried certificate"
+    ],
+    "officialLink": "https://www.wbkanyashree.gov.in/",
+    "applicationMode": "Offline",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate",
+      "Active Bank Account Details / Passbook"
+    ]
+  },
+  {
+    "id": "wb-swasthya-sathi",
+    "name": "Swasthya Sathi",
+    "category": "Health",
+    "description": "A basic health cover for secondary and tertiary care up to ₹5 Lakh per annum per family.",
+    "benefits": [
+      "Cashless health insurance",
+      "No cap on family size"
+    ],
+    "eligibility": {
+      "location": "West Bengal",
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student",
+        "Farmer",
+        "Entrepreneur",
+        "None"
+      ],
+      "disabledOnly": false,
+      "minAge": 18,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Enroll via Duare Sarkar camps",
+      "Receive smart card issued to female head"
+    ],
+    "officialLink": "https://swasthyasathi.gov.in/",
+    "applicationMode": "Offline",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate"
+    ]
+  },
+  {
+    "id": "ap-rythu-bharosa",
+    "name": "YSR Rythu Bharosa",
+    "category": "Agriculture",
+    "description": "Financial assistance to farmers, including tenant farmers.",
+    "benefits": [
+      "₹13,500 per year per farmer family"
+    ],
+    "eligibility": {
+      "location": "Andhra Pradesh",
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Farmer",
+        "Daily Wager"
+      ],
+      "disabledOnly": false,
+      "minAge": 18,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Village Secretariats assist in identifying beneficiaries",
+      "Direct bank transfer"
+    ],
+    "officialLink": "https://ysrrythubharosa.ap.gov.in/",
+    "applicationMode": "Offline",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate",
+      "Land Ownership Records (RTC)",
+      "Active Bank Account Details / Passbook"
+    ]
+  },
+  {
+    "id": "ap-aarogyasri",
+    "name": "Dr. YSR Aarogyasri",
+    "category": "Health",
+    "description": "Quality healthcare to the poor for catastrophic illnesses.",
+    "benefits": [
+      "Cashless treatment up to ₹5 lakh in network hospitals"
+    ],
+    "eligibility": {
+      "location": "Andhra Pradesh",
+      "maxIncome": 500000,
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student",
+        "Farmer",
+        "Entrepreneur",
+        "None"
+      ],
+      "disabledOnly": false,
+      "minAge": 18,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Show YSR Aarogyasri health card or Rice Card at network hospital"
+    ],
+    "officialLink": "https://www.ysraarogyasri.ap.gov.in/",
+    "applicationMode": "Offline",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Income Certificate",
+      "Category / Caste Certificate",
+      "Active Bank Account Details / Passbook"
+    ]
+  },
+  {
+    "id": "od-kalia",
+    "name": "KALIA Scheme",
+    "category": "Agriculture",
+    "description": "Krushak Assistance for Livelihood and Income Augmentation for empowering farmers.",
+    "benefits": [
+      "₹10,000 per family per year for small/marginal farmers",
+      "Assistance for landless laborers"
+    ],
+    "eligibility": {
+      "location": "Odisha",
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Farmer",
+        "Daily Wager"
+      ],
+      "disabledOnly": false,
+      "minAge": 18,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Gram Panchayat validation",
+      "Direct Benefit Transfer"
+    ],
+    "officialLink": "https://kalia.odisha.gov.in/",
+    "applicationMode": "Offline",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate",
+      "Land Ownership Records (RTC)",
+      "Active Bank Account Details / Passbook"
+    ]
+  },
+  {
+    "id": "od-bsky",
+    "name": "Biju Swasthya Kalyan Yojana (BSKY)",
+    "category": "Health",
+    "description": "Universal health coverage for impoverished populations in Odisha.",
+    "benefits": [
+      "Free healthcare in govt hospitals",
+      "Up to ₹5 lakh cashless treatment privately (₹10 lakh for women)"
+    ],
+    "eligibility": {
+      "location": "Odisha",
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student",
+        "Farmer",
+        "Entrepreneur",
+        "None"
+      ],
+      "disabledOnly": false,
+      "minAge": 18,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Use BSKY smart card or Food Security Card at empanelled hospitals"
+    ],
+    "officialLink": "https://bsky.odisha.gov.in/",
+    "applicationMode": "Offline",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate",
+      "Active Bank Account Details / Passbook"
+    ]
+  },
+  {
+    "id": "mp-ladli-behna",
+    "name": "Mukhyamantri Ladli Behna Yojana",
+    "category": "Women Empowerment",
+    "description": "Financial independence scheme for eligible women in Madhya Pradesh.",
+    "benefits": [
+      "₹1,250 transferred monthly to linked bank account"
+    ],
+    "eligibility": {
+      "location": "Madhya Pradesh",
+      "minAge": 18,
+      "gender": [
+        "Female"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student",
+        "Farmer",
+        "Entrepreneur",
+        "None"
+      ],
+      "disabledOnly": false,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Apply at local camp or Gram Panchayat",
+      "Aadhaar e-KYC linked account required"
+    ],
+    "officialLink": "https://cmladlibahna.mp.gov.in/",
+    "applicationMode": "Offline",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate",
+      "Active Bank Account Details / Passbook"
+    ]
+  },
+  {
+    "id": "rj-chiranjeevi",
+    "name": "Chiranjeevi Health Insurance Scheme",
+    "category": "Health",
+    "description": "Cashless health insurance scheme for all families in Rajasthan.",
+    "benefits": [
+      "Health insurance up to ₹25 lakh per family"
+    ],
+    "eligibility": {
+      "location": "Rajasthan",
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student",
+        "Farmer",
+        "Entrepreneur",
+        "None"
+      ],
+      "disabledOnly": false,
+      "minAge": 18,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Register using Jan Aadhaar card online or at e-Mitra"
+    ],
+    "officialLink": "https://chiranjeevi.rajasthan.gov.in/",
+    "applicationMode": "Online",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate",
+      "Active Bank Account Details / Passbook"
+    ]
+  },
+  {
+    "id": "tn-pudhumai-penn",
+    "name": "Moovalur Ramamirtham Ammaiyar (Pudhumai Penn)",
+    "category": "Education",
+    "description": "Financial assistance for girls moving from govt schools to higher education.",
+    "benefits": [
+      "₹1,000 directly deposited to bank accounts monthly until completion of degree"
+    ],
+    "eligibility": {
+      "location": "Tamil Nadu",
+      "gender": [
+        "Female"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student"
+      ],
+      "disabledOnly": false,
+      "minAge": 18,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Apply online through college administration portal"
+    ],
+    "officialLink": "https://pudhumaipenn.tn.gov.in/",
+    "applicationMode": "Online",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate",
+      "Previous Year Marksheet",
+      "Institution Admission Proof",
+      "Active Bank Account Details / Passbook"
+    ]
+  },
+  {
+    "id": "kl-life-mission",
+    "name": "LIFE Mission Kerala",
+    "category": "Housing",
+    "description": "Livelihood Inclusion and Financial Empowerment scheme to provide housing to the homeless.",
+    "benefits": [
+      "Safe housing complexes or financial aid to build houses"
+    ],
+    "eligibility": {
+      "location": "Kerala",
+      "maxIncome": 300000,
+      "gender": [
+        "Male",
+        "Female",
+        "Other"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student",
+        "Farmer",
+        "Entrepreneur",
+        "None"
+      ],
+      "disabledOnly": false,
+      "minAge": 18,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Register through respective local self-government portals"
+    ],
+    "officialLink": "https://lifemission.kerala.gov.in/",
+    "applicationMode": "Online",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Income Certificate",
+      "Category / Caste Certificate",
+      "Active Bank Account Details / Passbook"
+    ]
+  },
+  {
+    "id": "gj-vahali-dikri",
+    "name": "Vahali Dikri Yojana",
+    "category": "Women Empowerment",
+    "description": "Addresses the skewed sex ratio and supports girl child education.",
+    "benefits": [
+      "₹1.10 Lakh assistance distributed at Class 1, Class 9, and at age 18"
+    ],
+    "eligibility": {
+      "location": "Gujarat",
+      "maxIncome": 200000,
+      "gender": [
+        "Female"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student"
+      ],
+      "disabledOnly": false,
+      "minAge": 0,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Submit application with Anganwadi worker within a year of birth"
+    ],
+    "officialLink": "https://sje.gujarat.gov.in/",
+    "applicationMode": "Offline",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Income Certificate",
+      "Category / Caste Certificate",
+      "Previous Year Marksheet",
+      "Institution Admission Proof",
+      "Active Bank Account Details / Passbook"
+    ]
+  },
+  {
+    "id": "br-kanya-utthan",
+    "name": "Mukhyamantri Kanya Utthan Yojana",
+    "category": "Education",
+    "description": "Holistic development and empowerment of the girl child from birth to graduation.",
+    "benefits": [
+      "Total benefits up to ₹54,100 disbursed across different life stages"
+    ],
+    "eligibility": {
+      "location": "Bihar",
+      "gender": [
+        "Female"
+      ],
+      "caste": [
+        "General",
+        "OBC",
+        "SC",
+        "ST"
+      ],
+      "area": [
+        "Rural",
+        "Urban"
+      ],
+      "occupation": [
+        "Student"
+      ],
+      "disabledOnly": false,
+      "minAge": 0,
+      "maxAge": 120
+    },
+    "applicationSteps": [
+      "Online application via E-Kalyan portal for graduations/birth registration"
+    ],
+    "officialLink": "https://medhasoft.bih.nic.in/",
+    "applicationMode": "Online",
+    "requiredDocuments": [
+      "Aadhaar Card",
+      "Passport Size Photograph",
+      "Category / Caste Certificate",
+      "Previous Year Marksheet",
+      "Institution Admission Proof",
+      "Active Bank Account Details / Passbook"
+    ]
+  }
+]

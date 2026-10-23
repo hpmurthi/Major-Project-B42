@@ -1,0 +1,1115 @@
+[
+  {
+    "id": "user_demo_farmer",
+    "name": "Ramesh Patel",
+    "email": "farmer@demo.gov",
+    "createdAt": "16 Oct 2026, 06:00 AM",
+    "lastLogin": "16/10/2026, 6:27:53 am",
+    "profile": {
+      "gender": "Male",
+      "age": 42,
+      "occupation": "Farmer",
+      "income": 180000,
+      "location": "Gujarat",
+      "district": "Anand",
+      "disabled": "No",
+      "caste": "OBC",
+      "area": "Rural"
+    },
+    "eligibleSchemes": [
+      {
+        "id": "pm-kisan",
+        "name": "Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)",
+        "category": "Agriculture",
+        "officialLink": "https://pmkisan.gov.in/",
+        "applicationMode": "Both"
+      },
+      {
+        "id": "pmfby",
+        "name": "Pradhan Mantri Fasal Bima Yojana (PMFBY)",
+        "category": "Agriculture",
+        "officialLink": "https://pmfby.gov.in/",
+        "applicationMode": "Online"
+      },
+      {
+        "id": "kcc",
+        "name": "Kisan Credit Card (KCC)",
+        "category": "Agriculture",
+        "officialLink": "https://www.myscheme.gov.in/schemes/kcc",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "pm-jay",
+        "name": "Ayushman Bharat (PM-JAY)",
+        "category": "Health",
+        "officialLink": "https://pmjay.gov.in/",
+        "applicationMode": "Both"
+      },
+      {
+        "id": "pm-jan-aushadhi",
+        "name": "Pradhan Mantri Bhartiya Janaushadhi Pariyojana",
+        "category": "Health",
+        "officialLink": "http://janaushadhi.gov.in/",
+        "applicationMode": "Online"
+      },
+      {
+        "id": "pm-jdy",
+        "name": "Pradhan Mantri Jan Dhan Yojana (PMJDY)",
+        "category": "Finance",
+        "officialLink": "https://pmjdy.gov.in/",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "pm-jjby",
+        "name": "Pradhan Mantri Jeevan Jyoti Bima Yojana",
+        "category": "Finance",
+        "officialLink": "https://financialservices.gov.in/beta/en/pmjjby",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "atal-pension",
+        "name": "Atal Pension Yojana (APY)",
+        "category": "Finance",
+        "officialLink": "https://npscra.nsdl.co.in/scheme-details.php",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "mgnrega",
+        "name": "MGNREGA",
+        "category": "Employment",
+        "officialLink": "https://nrega.nic.in/",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "pm-kisan-v2",
+        "name": "Updated PM Kisan Samman Nidhi",
+        "category": "Agriculture",
+        "officialLink": "https://pmkisan.gov.in",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "pradhan-mantri-surya-ghar-muft-bijli-yojana",
+        "name": "Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "category": "Energy & Infrastructure",
+        "officialLink": "https://pmsuryaghar.gov.in/",
+        "applicationMode": "Online"
+      }
+    ],
+    "eligibleSchemesCount": 11,
+    "updatedAt": "16 Oct 2026, 02:57 pm",
+    "notifications": [
+      {
+        "id": "notif_gov_1792142821933_flep",
+        "type": "benefit_update",
+        "schemeId": "test-scheme",
+        "schemeName": "Test Scheme",
+        "schemeCategory": "Employment",
+        "officialLink": "https://www.aicte.gov.in/schemes/students-development-schemes",
+        "title": "📋 Official Scheme Revision: Test Scheme",
+        "body": "Official Welfare Gazette (16 Oct 2026): Age has been updated: Maximum age is 10 Eligible citizens are advised to review the revised guidelines and apply on the official portal.",
+        "timestamp": "16 Oct 2026, 02:57 pm",
+        "isOfficialBulletin": true,
+        "read": false
+      },
+      {
+        "id": "notif_gov_1792134998564_i5i2",
+        "type": "benefit_update",
+        "schemeId": "pradhan-mantri-surya-ghar-muft-bijli-yojana",
+        "schemeName": "Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "schemeCategory": "Energy & Infrastructure",
+        "officialLink": "https://pmsuryaghar.gov.in/",
+        "title": "📋 Official Scheme Revision: Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "body": "Official Welfare Gazette (16 Oct 2026): Official Welfare Gazette (16 Oct 2026): The guidelines, benefits, and operational provisions for 'Pradhan Mantri Surya Ghar: Muft Bijli Yojana' have been revised by the nodal department. Primary benefits: Up to 300 units of free electricity per month; Enhanced subsidy of ₹85,000 directly transferred to beneficiary bank account. Eligible citizens are advised to check guidelines and apply on the official portal. Eligible citizens are advised to review the revised guidelines and apply on the official portal.",
+        "timestamp": "16 Oct 2026, 12:46 pm",
+        "isOfficialBulletin": true,
+        "read": false
+      },
+      {
+        "id": "notif_gov_1792134943424_lfr2",
+        "type": "benefit_update",
+        "schemeId": "pradhan-mantri-surya-ghar-muft-bijli-yojana",
+        "schemeName": "Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "schemeCategory": "Energy & Infrastructure",
+        "officialLink": "https://pmsuryaghar.gov.in/",
+        "title": "📋 Official Scheme Revision: Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "body": "Official Welfare Gazette (16 Oct 2026): Official Welfare Gazette (16 Oct 2026): The guidelines, benefits, and operational provisions for 'Pradhan Mantri Surya Ghar: Muft Bijli Yojana' have been revised by the nodal department. Primary benefits: Up to 300 units of free electricity per month; Enhanced subsidy of ₹85,000 directly transferred to beneficiary bank account. Eligible citizens are advised to check guidelines and apply on the official portal. Eligible citizens are advised to review the revised guidelines and apply on the official portal.",
+        "timestamp": "16 Oct 2026, 12:45 pm",
+        "isOfficialBulletin": true,
+        "read": false
+      },
+      {
+        "id": "notif_gov_1792134861269_e1zz",
+        "type": "benefit_update",
+        "schemeId": "pradhan-mantri-surya-ghar-muft-bijli-yojana",
+        "schemeName": "Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "schemeCategory": "Energy & Infrastructure",
+        "officialLink": "https://pmsuryaghar.gov.in/",
+        "title": "📋 Official Scheme Revision: Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "body": "Official Welfare Gazette (16 Oct 2026): Age has been changed to 80 Eligible citizens are advised to review the revised guidelines and apply on the official portal.",
+        "timestamp": "16 Oct 2026, 12:44 pm",
+        "isOfficialBulletin": true,
+        "read": false
+      },
+      {
+        "id": "notif_gov_1792134657769_eul6",
+        "type": "benefit_update",
+        "schemeId": "pradhan-mantri-surya-ghar-muft-bijli-yojana",
+        "schemeName": "Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "schemeCategory": "Energy & Infrastructure",
+        "officialLink": "https://pmsuryaghar.gov.in/",
+        "title": "📋 Official Scheme Revision: Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "body": "Official Welfare Gazette (16 Oct 2026): Official Welfare Gazette (16 Oct 2026): The guidelines, benefits, and operational provisions for 'Pradhan Mantri Surya Ghar: Muft Bijli Yojana' have been revised by the nodal department. Primary benefits: Up to 300 units of free electricity per month; Enhanced subsidy of ₹85,000 directly transferred to beneficiary bank account. Eligible citizens are advised to check guidelines and apply on the official portal. Eligible citizens are advised to review the revised guidelines and apply on the official portal.",
+        "timestamp": "16 Oct 2026, 12:40 pm",
+        "isOfficialBulletin": true,
+        "read": false
+      },
+      {
+        "id": "notif_gov_1792134565895_ho2g",
+        "type": "portal_live",
+        "schemeId": "test-scheme",
+        "schemeName": "Test Scheme",
+        "schemeCategory": "Employment",
+        "officialLink": "https://www.aicte.gov.in/schemes/students-development-schemes",
+        "title": "New Update from !!!!!",
+        "body": "Official Welfare Gazette (16 Oct 2026): New update addede Eligible citizens are advised to review the revised guidelines and apply on the official portal.",
+        "timestamp": "16 Oct 2026, 12:39 pm",
+        "isOfficialBulletin": true,
+        "read": false
+      },
+      {
+        "id": "notif_gov_1792125825973_3t01",
+        "type": "benefit_update",
+        "schemeId": "pradhan-mantri-surya-ghar-muft-bijli-yojana",
+        "schemeName": "Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "schemeCategory": "Energy & Infrastructure",
+        "officialLink": "https://pmsuryaghar.gov.in/",
+        "title": "📋 Official Scheme Revision: PM Surya Ghar Muft Bijli Yojana",
+        "body": "Official Welfare Gazette (16 Oct 2026): Official revision published: Rooftop solar financial assistance ceiling enhanced to ₹85,000 and loan interest reduced to 6.5%. Eligible households can apply directly online. Eligible citizens are advised to review the revised guidelines and apply on the official portal.",
+        "timestamp": "16 Oct 2026, 10:13 am",
+        "isOfficialBulletin": true,
+        "read": false
+      },
+      {
+        "id": "notif_gov_1792125825945_j0sf",
+        "type": "announcement",
+        "schemeId": "pradhan-mantri-surya-ghar-muft-bijli-yojana",
+        "schemeName": "Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "schemeCategory": "Energy & Infrastructure",
+        "officialLink": "https://pmsuryaghar.gov.in/",
+        "title": "📢 Official Gazette: Launch of PM Surya Ghar Muft Bijli Yojana",
+        "body": "Official Welfare Gazette (16 Oct 2026): The Government of India has launched the national rooftop solar subsidy program providing up to ₹78,000 direct bank subsidy and up to 300 units of free power monthly. Applications are now open on the official national portal. Eligible citizens are advised to review the revised guidelines and apply on the official portal.",
+        "timestamp": "16 Oct 2026, 10:13 am",
+        "isOfficialBulletin": true,
+        "read": false
+      }
+    ]
+  },
+  {
+    "id": "user_demo_student",
+    "name": "Pooja Verma",
+    "email": "student@demo.gov",
+    "createdAt": "16 Oct 2026, 06:00 AM",
+    "lastLogin": "16/10/2026, 6:57:05 am",
+    "profile": {
+      "gender": "Female",
+      "age": 20,
+      "occupation": "Student",
+      "income": 120000,
+      "location": "Uttar Pradesh",
+      "district": "Lucknow",
+      "disabled": "No",
+      "caste": "SC",
+      "area": "Urban"
+    },
+    "eligibleSchemes": [
+      {
+        "id": "nsp-post-matric",
+        "name": "National Scholarship - Post-Matric",
+        "category": "Education",
+        "officialLink": "https://scholarships.gov.in/",
+        "applicationMode": "Online"
+      },
+      {
+        "id": "up-scholarship",
+        "name": "UP Pre and Post Matric Scholarship",
+        "category": "Education",
+        "officialLink": "https://scholarship.up.gov.in/",
+        "applicationMode": "Online"
+      },
+      {
+        "id": "pragati-scholarship",
+        "name": "AICTE Pragati Scholarship for Girls",
+        "category": "Education",
+        "officialLink": "https://www.aicte-india.org/schemes/students-development-schemes",
+        "applicationMode": "Online"
+      },
+      {
+        "id": "pm-jay",
+        "name": "Ayushman Bharat (PM-JAY)",
+        "category": "Health",
+        "officialLink": "https://pmjay.gov.in/",
+        "applicationMode": "Both"
+      },
+      {
+        "id": "pm-jan-aushadhi",
+        "name": "Pradhan Mantri Bhartiya Janaushadhi Pariyojana",
+        "category": "Health",
+        "officialLink": "http://janaushadhi.gov.in/",
+        "applicationMode": "Online"
+      },
+      {
+        "id": "pm-jdy",
+        "name": "Pradhan Mantri Jan Dhan Yojana (PMJDY)",
+        "category": "Finance",
+        "officialLink": "https://pmjdy.gov.in/",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "pm-jjby",
+        "name": "Pradhan Mantri Jeevan Jyoti Bima Yojana",
+        "category": "Finance",
+        "officialLink": "https://financialservices.gov.in/beta/en/pmjjby",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "atal-pension",
+        "name": "Atal Pension Yojana (APY)",
+        "category": "Finance",
+        "officialLink": "https://npscra.nsdl.co.in/scheme-details.php",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "sukanya-samriddhi",
+        "name": "Sukanya Samriddhi Yojana",
+        "category": "Social Welfare",
+        "officialLink": "https://www.indiapost.gov.in/",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "pm-ujjwala",
+        "name": "Pradhan Mantri Ujjwala Yojana (PMUY)",
+        "category": "Social Welfare",
+        "officialLink": "https://www.pmuy.gov.in/",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "pmmvy",
+        "name": "Pradhan Mantri Matru Vandana Yojana",
+        "category": "Social Welfare",
+        "officialLink": "https://wcd.nic.in/schemes/pradhan-mantri-matru-vandana-yojana",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "pm-awas-yojana-urban",
+        "name": "Pradhan Mantri Awas Yojana (PMAY-U)",
+        "category": "Housing",
+        "officialLink": "https://pmay-urban.gov.in/",
+        "applicationMode": "Both"
+      },
+      {
+        "id": "pradhan-mantri-surya-ghar-muft-bijli-yojana",
+        "name": "Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "category": "Energy & Infrastructure",
+        "officialLink": "https://pmsuryaghar.gov.in/",
+        "applicationMode": "Online"
+      }
+    ],
+    "eligibleSchemesCount": 13,
+    "updatedAt": "16 Oct 2026, 02:57 pm",
+    "notifications": [
+      {
+        "id": "notif_gov_1792142821933_flep",
+        "type": "benefit_update",
+        "schemeId": "test-scheme",
+        "schemeName": "Test Scheme",
+        "schemeCategory": "Employment",
+        "officialLink": "https://www.aicte.gov.in/schemes/students-development-schemes",
+        "title": "📋 Official Scheme Revision: Test Scheme",
+        "body": "Official Welfare Gazette (16 Oct 2026): Age has been updated: Maximum age is 10 Eligible citizens are advised to review the revised guidelines and apply on the official portal.",
+        "timestamp": "16 Oct 2026, 02:57 pm",
+        "isOfficialBulletin": true,
+        "read": false
+      },
+      {
+        "id": "notif_gov_1792134998564_i5i2",
+        "type": "benefit_update",
+        "schemeId": "pradhan-mantri-surya-ghar-muft-bijli-yojana",
+        "schemeName": "Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "schemeCategory": "Energy & Infrastructure",
+        "officialLink": "https://pmsuryaghar.gov.in/",
+        "title": "📋 Official Scheme Revision: Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "body": "Official Welfare Gazette (16 Oct 2026): Official Welfare Gazette (16 Oct 2026): The guidelines, benefits, and operational provisions for 'Pradhan Mantri Surya Ghar: Muft Bijli Yojana' have been revised by the nodal department. Primary benefits: Up to 300 units of free electricity per month; Enhanced subsidy of ₹85,000 directly transferred to beneficiary bank account. Eligible citizens are advised to check guidelines and apply on the official portal. Eligible citizens are advised to review the revised guidelines and apply on the official portal.",
+        "timestamp": "16 Oct 2026, 12:46 pm",
+        "isOfficialBulletin": true,
+        "read": false
+      },
+      {
+        "id": "notif_gov_1792134943424_lfr2",
+        "type": "benefit_update",
+        "schemeId": "pradhan-mantri-surya-ghar-muft-bijli-yojana",
+        "schemeName": "Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "schemeCategory": "Energy & Infrastructure",
+        "officialLink": "https://pmsuryaghar.gov.in/",
+        "title": "📋 Official Scheme Revision: Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "body": "Official Welfare Gazette (16 Oct 2026): Official Welfare Gazette (16 Oct 2026): The guidelines, benefits, and operational provisions for 'Pradhan Mantri Surya Ghar: Muft Bijli Yojana' have been revised by the nodal department. Primary benefits: Up to 300 units of free electricity per month; Enhanced subsidy of ₹85,000 directly transferred to beneficiary bank account. Eligible citizens are advised to check guidelines and apply on the official portal. Eligible citizens are advised to review the revised guidelines and apply on the official portal.",
+        "timestamp": "16 Oct 2026, 12:45 pm",
+        "isOfficialBulletin": true,
+        "read": false
+      },
+      {
+        "id": "notif_gov_1792134861269_e1zz",
+        "type": "benefit_update",
+        "schemeId": "pradhan-mantri-surya-ghar-muft-bijli-yojana",
+        "schemeName": "Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "schemeCategory": "Energy & Infrastructure",
+        "officialLink": "https://pmsuryaghar.gov.in/",
+        "title": "📋 Official Scheme Revision: Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "body": "Official Welfare Gazette (16 Oct 2026): Age has been changed to 80 Eligible citizens are advised to review the revised guidelines and apply on the official portal.",
+        "timestamp": "16 Oct 2026, 12:44 pm",
+        "isOfficialBulletin": true,
+        "read": false
+      },
+      {
+        "id": "notif_gov_1792134657769_eul6",
+        "type": "benefit_update",
+        "schemeId": "pradhan-mantri-surya-ghar-muft-bijli-yojana",
+        "schemeName": "Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "schemeCategory": "Energy & Infrastructure",
+        "officialLink": "https://pmsuryaghar.gov.in/",
+        "title": "📋 Official Scheme Revision: Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "body": "Official Welfare Gazette (16 Oct 2026): Official Welfare Gazette (16 Oct 2026): The guidelines, benefits, and operational provisions for 'Pradhan Mantri Surya Ghar: Muft Bijli Yojana' have been revised by the nodal department. Primary benefits: Up to 300 units of free electricity per month; Enhanced subsidy of ₹85,000 directly transferred to beneficiary bank account. Eligible citizens are advised to check guidelines and apply on the official portal. Eligible citizens are advised to review the revised guidelines and apply on the official portal.",
+        "timestamp": "16 Oct 2026, 12:40 pm",
+        "isOfficialBulletin": true,
+        "read": false
+      },
+      {
+        "id": "notif_gov_1792134565895_ho2g",
+        "type": "portal_live",
+        "schemeId": "test-scheme",
+        "schemeName": "Test Scheme",
+        "schemeCategory": "Employment",
+        "officialLink": "https://www.aicte.gov.in/schemes/students-development-schemes",
+        "title": "New Update from !!!!!",
+        "body": "Official Welfare Gazette (16 Oct 2026): New update addede Eligible citizens are advised to review the revised guidelines and apply on the official portal.",
+        "timestamp": "16 Oct 2026, 12:39 pm",
+        "isOfficialBulletin": true,
+        "read": false
+      },
+      {
+        "id": "notif_gov_1792125825973_3t01",
+        "type": "benefit_update",
+        "schemeId": "pradhan-mantri-surya-ghar-muft-bijli-yojana",
+        "schemeName": "Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "schemeCategory": "Energy & Infrastructure",
+        "officialLink": "https://pmsuryaghar.gov.in/",
+        "title": "📋 Official Scheme Revision: PM Surya Ghar Muft Bijli Yojana",
+        "body": "Official Welfare Gazette (16 Oct 2026): Official revision published: Rooftop solar financial assistance ceiling enhanced to ₹85,000 and loan interest reduced to 6.5%. Eligible households can apply directly online. Eligible citizens are advised to review the revised guidelines and apply on the official portal.",
+        "timestamp": "16 Oct 2026, 10:13 am",
+        "isOfficialBulletin": true,
+        "read": false
+      },
+      {
+        "id": "notif_gov_1792125825945_j0sf",
+        "type": "announcement",
+        "schemeId": "pradhan-mantri-surya-ghar-muft-bijli-yojana",
+        "schemeName": "Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "schemeCategory": "Energy & Infrastructure",
+        "officialLink": "https://pmsuryaghar.gov.in/",
+        "title": "📢 Official Gazette: Launch of PM Surya Ghar Muft Bijli Yojana",
+        "body": "Official Welfare Gazette (16 Oct 2026): The Government of India has launched the national rooftop solar subsidy program providing up to ₹78,000 direct bank subsidy and up to 300 units of free power monthly. Applications are now open on the official national portal. Eligible citizens are advised to review the revised guidelines and apply on the official portal.",
+        "timestamp": "16 Oct 2026, 10:13 am",
+        "isOfficialBulletin": true,
+        "read": false
+      }
+    ]
+  },
+  {
+    "id": "user_1792111485755_4rx3z",
+    "name": "Manjunatha S",
+    "email": "manju911389@gmail.com",
+    "createdAt": "16/10/2026, 6:58:38 am",
+    "lastLogin": "16/10/2026, 6:58:51 am",
+    "profile": {
+      "gender": "Male",
+      "age": 20,
+      "occupation": "Student",
+      "income": 10000,
+      "location": "Karnataka",
+      "district": "mysore",
+      "disabled": "No",
+      "caste": "SC",
+      "area": "Rural"
+    },
+    "eligibleSchemes": [
+      {
+        "id": "nsp-post-matric",
+        "name": "National Scholarship - Post-Matric",
+        "category": "Education",
+        "officialLink": "https://scholarships.gov.in/",
+        "applicationMode": "Online"
+      },
+      {
+        "id": "pm-jay",
+        "name": "Ayushman Bharat (PM-JAY)",
+        "category": "Health",
+        "officialLink": "https://pmjay.gov.in/",
+        "applicationMode": "Both"
+      },
+      {
+        "id": "pm-jan-aushadhi",
+        "name": "Pradhan Mantri Bhartiya Janaushadhi Pariyojana",
+        "category": "Health",
+        "officialLink": "http://janaushadhi.gov.in/",
+        "applicationMode": "Online"
+      },
+      {
+        "id": "pm-jdy",
+        "name": "Pradhan Mantri Jan Dhan Yojana (PMJDY)",
+        "category": "Finance",
+        "officialLink": "https://pmjdy.gov.in/",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "pm-jjby",
+        "name": "Pradhan Mantri Jeevan Jyoti Bima Yojana",
+        "category": "Finance",
+        "officialLink": "https://financialservices.gov.in/beta/en/pmjjby",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "atal-pension",
+        "name": "Atal Pension Yojana (APY)",
+        "category": "Finance",
+        "officialLink": "https://npscra.nsdl.co.in/scheme-details.php",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "pm-awas-yojana-gramin",
+        "name": "Pradhan Mantri Awas Yojana (PMAY-G)",
+        "category": "Housing",
+        "officialLink": "https://pmayg.nic.in/",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "mgnrega",
+        "name": "MGNREGA",
+        "category": "Employment",
+        "officialLink": "https://nrega.nic.in/",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "karnataka-anna-bhagya",
+        "name": "Anna Bhagya Scheme",
+        "category": "Food Security",
+        "officialLink": "https://ahara.kar.nic.in/",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "ka-gruha-jyothi",
+        "name": "Gruha Jyothi Scheme (Karnataka)",
+        "category": "Utility Subsidy",
+        "officialLink": "https://sevasindhu.karnataka.gov.in/",
+        "applicationMode": "Online"
+      },
+      {
+        "id": "ka-yuva-nidhi",
+        "name": "Yuva Nidhi Scheme (Karnataka)",
+        "category": "Employment",
+        "officialLink": "https://sevasindhu.karnataka.gov.in/",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "ka-raitha-vidya-nidhi",
+        "name": "Raitha Vidya Nidhi",
+        "category": "Education",
+        "officialLink": "https://ssp.postmatric.karnataka.gov.in/",
+        "applicationMode": "Online"
+      },
+      {
+        "id": "ka-vidyasiri",
+        "name": "Vidyasiri Scheme",
+        "category": "Education",
+        "officialLink": "https://karepass.cgg.gov.in/",
+        "applicationMode": "Online"
+      },
+      {
+        "id": "ka-kaushalya",
+        "name": "Kaushalya Karnataka",
+        "category": "Skill Development",
+        "officialLink": "https://www.kaushalkar.com/",
+        "applicationMode": "Online"
+      },
+      {
+        "id": "pradhan-mantri-surya-ghar-muft-bijli-yojana",
+        "name": "Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "category": "Energy & Infrastructure",
+        "officialLink": "https://pmsuryaghar.gov.in/",
+        "applicationMode": "Online"
+      }
+    ],
+    "eligibleSchemesCount": 15,
+    "updatedAt": "16 Oct 2026, 02:57 pm",
+    "notifications": [
+      {
+        "id": "notif_gov_1792142821933_flep",
+        "type": "benefit_update",
+        "schemeId": "test-scheme",
+        "schemeName": "Test Scheme",
+        "schemeCategory": "Employment",
+        "officialLink": "https://www.aicte.gov.in/schemes/students-development-schemes",
+        "title": "📋 Official Scheme Revision: Test Scheme",
+        "body": "Official Welfare Gazette (16 Oct 2026): Age has been updated: Maximum age is 10 Eligible citizens are advised to review the revised guidelines and apply on the official portal.",
+        "timestamp": "16 Oct 2026, 02:57 pm",
+        "isOfficialBulletin": true,
+        "read": false
+      },
+      {
+        "id": "notif_gov_1792134998564_i5i2",
+        "type": "benefit_update",
+        "schemeId": "pradhan-mantri-surya-ghar-muft-bijli-yojana",
+        "schemeName": "Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "schemeCategory": "Energy & Infrastructure",
+        "officialLink": "https://pmsuryaghar.gov.in/",
+        "title": "📋 Official Scheme Revision: Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "body": "Official Welfare Gazette (16 Oct 2026): Official Welfare Gazette (16 Oct 2026): The guidelines, benefits, and operational provisions for 'Pradhan Mantri Surya Ghar: Muft Bijli Yojana' have been revised by the nodal department. Primary benefits: Up to 300 units of free electricity per month; Enhanced subsidy of ₹85,000 directly transferred to beneficiary bank account. Eligible citizens are advised to check guidelines and apply on the official portal. Eligible citizens are advised to review the revised guidelines and apply on the official portal.",
+        "timestamp": "16 Oct 2026, 12:46 pm",
+        "isOfficialBulletin": true,
+        "read": false
+      },
+      {
+        "id": "notif_gov_1792134943424_lfr2",
+        "type": "benefit_update",
+        "schemeId": "pradhan-mantri-surya-ghar-muft-bijli-yojana",
+        "schemeName": "Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "schemeCategory": "Energy & Infrastructure",
+        "officialLink": "https://pmsuryaghar.gov.in/",
+        "title": "📋 Official Scheme Revision: Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "body": "Official Welfare Gazette (16 Oct 2026): Official Welfare Gazette (16 Oct 2026): The guidelines, benefits, and operational provisions for 'Pradhan Mantri Surya Ghar: Muft Bijli Yojana' have been revised by the nodal department. Primary benefits: Up to 300 units of free electricity per month; Enhanced subsidy of ₹85,000 directly transferred to beneficiary bank account. Eligible citizens are advised to check guidelines and apply on the official portal. Eligible citizens are advised to review the revised guidelines and apply on the official portal.",
+        "timestamp": "16 Oct 2026, 12:45 pm",
+        "isOfficialBulletin": true,
+        "read": false
+      },
+      {
+        "id": "notif_gov_1792134861269_e1zz",
+        "type": "benefit_update",
+        "schemeId": "pradhan-mantri-surya-ghar-muft-bijli-yojana",
+        "schemeName": "Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "schemeCategory": "Energy & Infrastructure",
+        "officialLink": "https://pmsuryaghar.gov.in/",
+        "title": "📋 Official Scheme Revision: Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "body": "Official Welfare Gazette (16 Oct 2026): Age has been changed to 80 Eligible citizens are advised to review the revised guidelines and apply on the official portal.",
+        "timestamp": "16 Oct 2026, 12:44 pm",
+        "isOfficialBulletin": true,
+        "read": false
+      },
+      {
+        "id": "notif_gov_1792134657769_eul6",
+        "type": "benefit_update",
+        "schemeId": "pradhan-mantri-surya-ghar-muft-bijli-yojana",
+        "schemeName": "Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "schemeCategory": "Energy & Infrastructure",
+        "officialLink": "https://pmsuryaghar.gov.in/",
+        "title": "📋 Official Scheme Revision: Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "body": "Official Welfare Gazette (16 Oct 2026): Official Welfare Gazette (16 Oct 2026): The guidelines, benefits, and operational provisions for 'Pradhan Mantri Surya Ghar: Muft Bijli Yojana' have been revised by the nodal department. Primary benefits: Up to 300 units of free electricity per month; Enhanced subsidy of ₹85,000 directly transferred to beneficiary bank account. Eligible citizens are advised to check guidelines and apply on the official portal. Eligible citizens are advised to review the revised guidelines and apply on the official portal.",
+        "timestamp": "16 Oct 2026, 12:40 pm",
+        "isOfficialBulletin": true,
+        "read": false
+      },
+      {
+        "id": "notif_gov_1792134565895_ho2g",
+        "type": "portal_live",
+        "schemeId": "test-scheme",
+        "schemeName": "Test Scheme",
+        "schemeCategory": "Employment",
+        "officialLink": "https://www.aicte.gov.in/schemes/students-development-schemes",
+        "title": "New Update from !!!!!",
+        "body": "Official Welfare Gazette (16 Oct 2026): New update addede Eligible citizens are advised to review the revised guidelines and apply on the official portal.",
+        "timestamp": "16 Oct 2026, 12:39 pm",
+        "isOfficialBulletin": true,
+        "read": false
+      },
+      {
+        "id": "notif_gov_1792125825973_3t01",
+        "type": "benefit_update",
+        "schemeId": "pradhan-mantri-surya-ghar-muft-bijli-yojana",
+        "schemeName": "Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "schemeCategory": "Energy & Infrastructure",
+        "officialLink": "https://pmsuryaghar.gov.in/",
+        "title": "📋 Official Scheme Revision: PM Surya Ghar Muft Bijli Yojana",
+        "body": "Official Welfare Gazette (16 Oct 2026): Official revision published: Rooftop solar financial assistance ceiling enhanced to ₹85,000 and loan interest reduced to 6.5%. Eligible households can apply directly online. Eligible citizens are advised to review the revised guidelines and apply on the official portal.",
+        "timestamp": "16 Oct 2026, 10:13 am",
+        "isOfficialBulletin": true,
+        "read": false
+      },
+      {
+        "id": "notif_gov_1792125825945_j0sf",
+        "type": "announcement",
+        "schemeId": "pradhan-mantri-surya-ghar-muft-bijli-yojana",
+        "schemeName": "Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "schemeCategory": "Energy & Infrastructure",
+        "officialLink": "https://pmsuryaghar.gov.in/",
+        "title": "📢 Official Gazette: Launch of PM Surya Ghar Muft Bijli Yojana",
+        "body": "Official Welfare Gazette (16 Oct 2026): The Government of India has launched the national rooftop solar subsidy program providing up to ₹78,000 direct bank subsidy and up to 300 units of free power monthly. Applications are now open on the official national portal. Eligible citizens are advised to review the revised guidelines and apply on the official portal.",
+        "timestamp": "16 Oct 2026, 10:13 am",
+        "isOfficialBulletin": true,
+        "read": false
+      }
+    ]
+  },
+  {
+    "id": "user_1792114389482_oz06c",
+    "name": "Haripriya",
+    "email": "plharipriya952@gmail.com",
+    "createdAt": "16/10/2026, 7:04:27 am",
+    "lastLogin": "16/10/2026, 1:08:08 pm",
+    "profile": {
+      "gender": "Female",
+      "age": 20,
+      "occupation": "Student",
+      "occupationRaw": "Student",
+      "nlpResult": {
+        "raw": "Student",
+        "canonical": "Student",
+        "secondaryRoles": [],
+        "isSmallScale": false,
+        "displayName": "Student",
+        "tags": [
+          "student",
+          ""
+        ],
+        "confidence": 1,
+        "explanation": "Exact match for Student."
+      },
+      "income": 50000,
+      "location": "Karnataka",
+      "district": "mysuru",
+      "disabled": "No",
+      "caste": "General",
+      "area": "Rural"
+    },
+    "eligibleSchemes": [
+      {
+        "id": "pragati-scholarship",
+        "name": "AICTE Pragati Scholarship for Girls",
+        "category": "Education",
+        "officialLink": "https://www.aicte-india.org/schemes/students-development-schemes",
+        "applicationMode": "Online"
+      },
+      {
+        "id": "pm-ujjwala",
+        "name": "Pradhan Mantri Ujjwala Yojana (PMUY)",
+        "category": "Social Welfare",
+        "officialLink": "https://www.pmuy.gov.in/",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "ka-raitha-vidya-nidhi",
+        "name": "Raitha Vidya Nidhi",
+        "category": "Education",
+        "officialLink": "https://ssp.postmatric.karnataka.gov.in/",
+        "applicationMode": "Online"
+      },
+      {
+        "id": "sukanya-samriddhi",
+        "name": "Sukanya Samriddhi Yojana",
+        "category": "Social Welfare",
+        "officialLink": "https://www.indiapost.gov.in/",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "pmmvy",
+        "name": "Pradhan Mantri Matru Vandana Yojana",
+        "category": "Social Welfare",
+        "officialLink": "https://wcd.nic.in/schemes/pradhan-mantri-matru-vandana-yojana",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "karnataka-gruha-lakshmi",
+        "name": "Gruha Lakshmi Scheme (Karnataka)",
+        "category": "Women Empowerment",
+        "officialLink": "https://sevasindhu.karnataka.gov.in/",
+        "applicationMode": "Online"
+      },
+      {
+        "id": "ka-shakti",
+        "name": "Shakti Scheme (Karnataka)",
+        "category": "Transport",
+        "officialLink": "https://sevasindhu.karnataka.gov.in/",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "ka-mathrushree",
+        "name": "Mathrushree Scheme",
+        "category": "Health & Welfare",
+        "officialLink": "https://karnataka.gov.in/",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "ka-bhagyalakshmi",
+        "name": "Bhagyalakshmi Scheme",
+        "category": "Social Welfare",
+        "officialLink": "https://dwcd.kar.nic.in/",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "ka-manaswini",
+        "name": "Manaswini Scheme",
+        "category": "Social Security",
+        "officialLink": "https://nadakacheri.karnataka.gov.in/",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "pm-jay",
+        "name": "Ayushman Bharat (PM-JAY)",
+        "category": "Health",
+        "officialLink": "https://pmjay.gov.in/",
+        "applicationMode": "Both"
+      },
+      {
+        "id": "pm-awas-yojana-gramin",
+        "name": "Pradhan Mantri Awas Yojana (PMAY-G)",
+        "category": "Housing",
+        "officialLink": "https://pmayg.nic.in/",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "karnataka-anna-bhagya",
+        "name": "Anna Bhagya Scheme",
+        "category": "Food Security",
+        "officialLink": "https://ahara.kar.nic.in/",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "pm-jan-aushadhi",
+        "name": "Pradhan Mantri Bhartiya Janaushadhi Pariyojana",
+        "category": "Health",
+        "officialLink": "http://janaushadhi.gov.in/",
+        "applicationMode": "Online"
+      },
+      {
+        "id": "pm-jdy",
+        "name": "Pradhan Mantri Jan Dhan Yojana (PMJDY)",
+        "category": "Finance",
+        "officialLink": "https://pmjdy.gov.in/",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "pm-jjby",
+        "name": "Pradhan Mantri Jeevan Jyoti Bima Yojana",
+        "category": "Finance",
+        "officialLink": "https://financialservices.gov.in/beta/en/pmjjby",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "atal-pension",
+        "name": "Atal Pension Yojana (APY)",
+        "category": "Finance",
+        "officialLink": "https://npscra.nsdl.co.in/scheme-details.php",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "mgnrega",
+        "name": "MGNREGA",
+        "category": "Employment",
+        "officialLink": "https://nrega.nic.in/",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "ka-gruha-jyothi",
+        "name": "Gruha Jyothi Scheme (Karnataka)",
+        "category": "Utility Subsidy",
+        "officialLink": "https://sevasindhu.karnataka.gov.in/",
+        "applicationMode": "Online"
+      },
+      {
+        "id": "ka-yuva-nidhi",
+        "name": "Yuva Nidhi Scheme (Karnataka)",
+        "category": "Employment",
+        "officialLink": "https://sevasindhu.karnataka.gov.in/",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "ka-kaushalya",
+        "name": "Kaushalya Karnataka",
+        "category": "Skill Development",
+        "officialLink": "https://www.kaushalkar.com/",
+        "applicationMode": "Online"
+      },
+      {
+        "id": "pradhan-mantri-surya-ghar-muft-bijli-yojana",
+        "name": "Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "category": "Energy & Infrastructure",
+        "officialLink": "https://pmsuryaghar.gov.in/",
+        "applicationMode": "Online"
+      }
+    ],
+    "eligibleSchemesCount": 22,
+    "updatedAt": "16 Oct 2026, 02:57 pm",
+    "notifications": [
+      {
+        "id": "notif_gov_1792142821933_flep",
+        "type": "benefit_update",
+        "schemeId": "test-scheme",
+        "schemeName": "Test Scheme",
+        "schemeCategory": "Employment",
+        "officialLink": "https://www.aicte.gov.in/schemes/students-development-schemes",
+        "title": "📋 Official Scheme Revision: Test Scheme",
+        "body": "Official Welfare Gazette (16 Oct 2026): Age has been updated: Maximum age is 10 Eligible citizens are advised to review the revised guidelines and apply on the official portal.",
+        "timestamp": "16 Oct 2026, 02:57 pm",
+        "isOfficialBulletin": true,
+        "read": false
+      },
+      {
+        "id": "notif_gov_1792134998564_i5i2",
+        "type": "benefit_update",
+        "schemeId": "pradhan-mantri-surya-ghar-muft-bijli-yojana",
+        "schemeName": "Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "schemeCategory": "Energy & Infrastructure",
+        "officialLink": "https://pmsuryaghar.gov.in/",
+        "title": "📋 Official Scheme Revision: Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "body": "Official Welfare Gazette (16 Oct 2026): Official Welfare Gazette (16 Oct 2026): The guidelines, benefits, and operational provisions for 'Pradhan Mantri Surya Ghar: Muft Bijli Yojana' have been revised by the nodal department. Primary benefits: Up to 300 units of free electricity per month; Enhanced subsidy of ₹85,000 directly transferred to beneficiary bank account. Eligible citizens are advised to check guidelines and apply on the official portal. Eligible citizens are advised to review the revised guidelines and apply on the official portal.",
+        "timestamp": "16 Oct 2026, 12:46 pm",
+        "isOfficialBulletin": true,
+        "read": false
+      },
+      {
+        "id": "notif_gov_1792134943424_lfr2",
+        "type": "benefit_update",
+        "schemeId": "pradhan-mantri-surya-ghar-muft-bijli-yojana",
+        "schemeName": "Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "schemeCategory": "Energy & Infrastructure",
+        "officialLink": "https://pmsuryaghar.gov.in/",
+        "title": "📋 Official Scheme Revision: Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "body": "Official Welfare Gazette (16 Oct 2026): Official Welfare Gazette (16 Oct 2026): The guidelines, benefits, and operational provisions for 'Pradhan Mantri Surya Ghar: Muft Bijli Yojana' have been revised by the nodal department. Primary benefits: Up to 300 units of free electricity per month; Enhanced subsidy of ₹85,000 directly transferred to beneficiary bank account. Eligible citizens are advised to check guidelines and apply on the official portal. Eligible citizens are advised to review the revised guidelines and apply on the official portal.",
+        "timestamp": "16 Oct 2026, 12:45 pm",
+        "isOfficialBulletin": true,
+        "read": false
+      },
+      {
+        "id": "notif_gov_1792134861269_e1zz",
+        "type": "benefit_update",
+        "schemeId": "pradhan-mantri-surya-ghar-muft-bijli-yojana",
+        "schemeName": "Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "schemeCategory": "Energy & Infrastructure",
+        "officialLink": "https://pmsuryaghar.gov.in/",
+        "title": "📋 Official Scheme Revision: Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "body": "Official Welfare Gazette (16 Oct 2026): Age has been changed to 80 Eligible citizens are advised to review the revised guidelines and apply on the official portal.",
+        "timestamp": "16 Oct 2026, 12:44 pm",
+        "isOfficialBulletin": true,
+        "read": false
+      },
+      {
+        "id": "notif_gov_1792134657769_eul6",
+        "type": "benefit_update",
+        "schemeId": "pradhan-mantri-surya-ghar-muft-bijli-yojana",
+        "schemeName": "Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "schemeCategory": "Energy & Infrastructure",
+        "officialLink": "https://pmsuryaghar.gov.in/",
+        "title": "📋 Official Scheme Revision: Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "body": "Official Welfare Gazette (16 Oct 2026): Official Welfare Gazette (16 Oct 2026): The guidelines, benefits, and operational provisions for 'Pradhan Mantri Surya Ghar: Muft Bijli Yojana' have been revised by the nodal department. Primary benefits: Up to 300 units of free electricity per month; Enhanced subsidy of ₹85,000 directly transferred to beneficiary bank account. Eligible citizens are advised to check guidelines and apply on the official portal. Eligible citizens are advised to review the revised guidelines and apply on the official portal.",
+        "timestamp": "16 Oct 2026, 12:40 pm",
+        "isOfficialBulletin": true,
+        "read": false
+      },
+      {
+        "id": "notif_gov_1792134565895_ho2g",
+        "type": "portal_live",
+        "schemeId": "test-scheme",
+        "schemeName": "Test Scheme",
+        "schemeCategory": "Employment",
+        "officialLink": "https://www.aicte.gov.in/schemes/students-development-schemes",
+        "title": "New Update from !!!!!",
+        "body": "Official Welfare Gazette (16 Oct 2026): New update addede Eligible citizens are advised to review the revised guidelines and apply on the official portal.",
+        "timestamp": "16 Oct 2026, 12:39 pm",
+        "isOfficialBulletin": true,
+        "read": false
+      },
+      {
+        "id": "notif_gov_1792125825973_3t01",
+        "type": "benefit_update",
+        "schemeId": "pradhan-mantri-surya-ghar-muft-bijli-yojana",
+        "schemeName": "Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "schemeCategory": "Energy & Infrastructure",
+        "officialLink": "https://pmsuryaghar.gov.in/",
+        "title": "📋 Official Scheme Revision: PM Surya Ghar Muft Bijli Yojana",
+        "body": "Official Welfare Gazette (16 Oct 2026): Official revision published: Rooftop solar financial assistance ceiling enhanced to ₹85,000 and loan interest reduced to 6.5%. Eligible households can apply directly online. Eligible citizens are advised to review the revised guidelines and apply on the official portal.",
+        "timestamp": "16 Oct 2026, 10:13 am",
+        "isOfficialBulletin": true,
+        "read": false
+      },
+      {
+        "id": "notif_gov_1792125825945_j0sf",
+        "type": "announcement",
+        "schemeId": "pradhan-mantri-surya-ghar-muft-bijli-yojana",
+        "schemeName": "Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "schemeCategory": "Energy & Infrastructure",
+        "officialLink": "https://pmsuryaghar.gov.in/",
+        "title": "📢 Official Gazette: Launch of PM Surya Ghar Muft Bijli Yojana",
+        "body": "Official Welfare Gazette (16 Oct 2026): The Government of India has launched the national rooftop solar subsidy program providing up to ₹78,000 direct bank subsidy and up to 300 units of free power monthly. Applications are now open on the official national portal. Eligible citizens are advised to review the revised guidelines and apply on the official portal.",
+        "timestamp": "16 Oct 2026, 10:13 am",
+        "isOfficialBulletin": true,
+        "read": false
+      }
+    ]
+  },
+  {
+    "id": "user_1792142200211_ym52y",
+    "name": "Lokesh",
+    "email": "lokeshm@gmail.com",
+    "createdAt": "16/10/2026, 2:50:05 pm",
+    "lastLogin": "16/10/2026, 8:02:43 pm",
+    "profile": {
+      "gender": "Male",
+      "age": 21,
+      "occupation": "Student",
+      "occupationRaw": "I'm studying in school",
+      "nlpResult": {
+        "raw": "I'm studying in school",
+        "canonical": "Student",
+        "secondaryRoles": [
+          "Unemployed"
+        ],
+        "isSmallScale": false,
+        "displayName": "Student / Scholar",
+        "tags": [
+          "student",
+          "unemployed",
+          "studying",
+          "school"
+        ],
+        "confidence": 0.8999999999999999,
+        "explanation": "Understood as Student / Scholar (Eligible for Post-Matric Scholarships, Free Coaching & Fellowship Schemes)"
+      },
+      "income": 50000,
+      "location": "Karnataka",
+      "district": "Mysore",
+      "disabled": "No",
+      "caste": "OBC",
+      "area": "Rural"
+    },
+    "eligibleSchemes": [
+      {
+        "id": "nsp-post-matric",
+        "name": "National Scholarship - Post-Matric",
+        "category": "Education",
+        "officialLink": "https://scholarships.gov.in/",
+        "applicationMode": "Online"
+      },
+      {
+        "id": "ka-raitha-vidya-nidhi",
+        "name": "Raitha Vidya Nidhi",
+        "category": "Education",
+        "officialLink": "https://ssp.postmatric.karnataka.gov.in/",
+        "applicationMode": "Online"
+      },
+      {
+        "id": "pm-jay",
+        "name": "Ayushman Bharat (PM-JAY)",
+        "category": "Health",
+        "officialLink": "https://pmjay.gov.in/",
+        "applicationMode": "Both"
+      },
+      {
+        "id": "pm-awas-yojana-gramin",
+        "name": "Pradhan Mantri Awas Yojana (PMAY-G)",
+        "category": "Housing",
+        "officialLink": "https://pmayg.nic.in/",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "karnataka-anna-bhagya",
+        "name": "Anna Bhagya Scheme",
+        "category": "Food Security",
+        "officialLink": "https://ahara.kar.nic.in/",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "ka-vidyasiri",
+        "name": "Vidyasiri Scheme",
+        "category": "Education",
+        "officialLink": "https://karepass.cgg.gov.in/",
+        "applicationMode": "Online"
+      },
+      {
+        "id": "pm-jan-aushadhi",
+        "name": "Pradhan Mantri Bhartiya Janaushadhi Pariyojana",
+        "category": "Health",
+        "officialLink": "http://janaushadhi.gov.in/",
+        "applicationMode": "Online"
+      },
+      {
+        "id": "pm-jdy",
+        "name": "Pradhan Mantri Jan Dhan Yojana (PMJDY)",
+        "category": "Finance",
+        "officialLink": "https://pmjdy.gov.in/",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "pm-jjby",
+        "name": "Pradhan Mantri Jeevan Jyoti Bima Yojana",
+        "category": "Finance",
+        "officialLink": "https://financialservices.gov.in/beta/en/pmjjby",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "atal-pension",
+        "name": "Atal Pension Yojana (APY)",
+        "category": "Finance",
+        "officialLink": "https://npscra.nsdl.co.in/scheme-details.php",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "mgnrega",
+        "name": "MGNREGA",
+        "category": "Employment",
+        "officialLink": "https://nrega.nic.in/",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "ka-gruha-jyothi",
+        "name": "Gruha Jyothi Scheme (Karnataka)",
+        "category": "Utility Subsidy",
+        "officialLink": "https://sevasindhu.karnataka.gov.in/",
+        "applicationMode": "Online"
+      },
+      {
+        "id": "ka-yuva-nidhi",
+        "name": "Yuva Nidhi Scheme (Karnataka)",
+        "category": "Employment",
+        "officialLink": "https://sevasindhu.karnataka.gov.in/",
+        "applicationMode": "Offline"
+      },
+      {
+        "id": "ka-kaushalya",
+        "name": "Kaushalya Karnataka",
+        "category": "Skill Development",
+        "officialLink": "https://www.kaushalkar.com/",
+        "applicationMode": "Online"
+      },
+      {
+        "id": "pradhan-mantri-surya-ghar-muft-bijli-yojana",
+        "name": "Pradhan Mantri Surya Ghar: Muft Bijli Yojana",
+        "category": "Energy & Infrastructure",
+        "officialLink": "https://pmsuryaghar.gov.in/",
+        "applicationMode": "Online"
+      }
+    ],
+    "eligibleSchemesCount": 15,
+    "updatedAt": "16/10/2026, 8:02:43 pm",
+    "notifications": [
+      {
+        "id": "notif_gov_1792142821933_flep",
+        "type": "benefit_update",
+        "schemeId": "test-scheme",
+        "schemeName": "Test Scheme",
+        "schemeCategory": "Employment",
+        "officialLink": "https://www.aicte.gov.in/schemes/students-development-schemes",
+        "title": "📋 Official Scheme Revision: Test Scheme",
+        "body": "Official Welfare Gazette (16 Oct 2026): Age has been updated: Maximum age is 10 Eligible citizens are advised to review the revised guidelines and apply on the official portal.",
+        "timestamp": "16 Oct 2026, 02:57 pm",
+        "isOfficialBulletin": true,
+        "read": false
+      }
+    ]
+  }
+]
